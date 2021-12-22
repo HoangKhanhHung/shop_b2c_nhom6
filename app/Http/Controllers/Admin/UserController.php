@@ -1,0 +1,80 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+class UserController extends Controller implements  ICrud
+{
+    //
+    public function index(){
+        //TODO: Implement index() method.
+        $list = User::orderBy('id', 'desc')->paginate(10);
+        return view('be.user.index', compact('list'));
+
+    }
+
+    public function add(){
+        //TODO: Implement add() method.
+        return view('be.user.add');
+    }
+
+    public function doAdd(Request $request)
+    {//dd($request->all());
+        // TODO: Implement doAdd() method.
+        $email = $request->email;
+        $fullName = $request->full_name;
+        $phone = $request->phone;
+        $password = $request->password;
+        try{
+            User::create([
+                'email' => $email,
+                'full_name'=> $fullName,
+                'phone'=>$phone,
+                'name'=>$email,
+                'password'=> Hash::make($password),
+            ]);
+        }catch (\Exception $exception){
+            return redirect()->back()->with('error', "Add failes");
+        }
+
+
+        return redirect()->route('admin.user.list')->with('success', "Add successfully");
+
+    }
+
+    public function doEdit($id, Request $request)
+    {
+        // TODO: Implement doEdit() method.
+        $email = $request->email;
+        $fullName = $request->full_name;
+        $phone = $request->phone;
+        $password = $request->password;
+        try{
+            User::where('id', $id)->update([
+                'email' => $email,
+                'full_name'=> $fullName,
+                'phone'=>$phone,
+                'name'=>$email,
+                'password'=> Hash::make($password),
+            ]);
+        }catch (\Exception $exception){
+            return redirect()->back()->with('error', "Update failed");
+        }
+
+
+        return redirect()->route('admin.user.list')->with('success', "Update successfully");
+    }
+
+    public function edit($id){
+        // TODO: Implement edit() method.
+        $user = User::find($id);
+        return view('be.user.edit', compact('user'));
+    }
+
+    public function delete(){
+
+    }
+}
