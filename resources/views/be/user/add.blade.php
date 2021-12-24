@@ -30,15 +30,23 @@
                             <label>Password</label>
                             <input type="password" name="password" class="form-control" placeholder="Password">
                         </div>
+                    </div>
+                    <!-- /.card-body -->
 
-                        <!-- /.card-body -->
-
-                        <div class="card-footer">
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
                 </form>
             </div>
         </div>
-        </div>
 
+    </div>
+@endsection
+
+@section('bread-crumb')
+    <ol class="breadcrumb float-sm-right">
+        <li class="breadcrumb-item"><a href="#">Admin</a></li>
+        <li class="breadcrumb-item"><a href="{{route('admin.user.list')}}">User</a></li>
+        <li class="breadcrumb-item active">Add</li>
+    </ol>
 @endsection
