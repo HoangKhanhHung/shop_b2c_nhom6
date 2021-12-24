@@ -27,7 +27,8 @@
                             <td>{{$item->full_name}}</td>
                             <td>
                                 <a class="btn btn-warning" href="{{route('admin.user.edit',['id'=>$item->id])}}">Edit</a>
-                                <a class="btn btn-danger" onclick="return confirm('Are you you want to delete this?')" href="">Delete</a>
+                                <a class="btn btn-danger"href="{{route('admin.user.delete',['id'=>$item->id])}}"
+                                   onclick="return confirm('Are you you want to delete this?')" href="">Delete</a>
                             </td>
                         </tr>
                     @endforeach

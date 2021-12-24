@@ -18,5 +18,7 @@ Route::prefix('/admin')->group(function (){
 
         Route::post('//do-edit/{id}',
             [\App\Http\Controllers\Admin\UserController::class, 'doEdit'])->name('admin.user.doEdit');
+        Route::get('/delete/{id}',
+            [\App\Http\Controllers\Admin\UserController::class,'delete'])->name('admin.user.delete');
     });
 });

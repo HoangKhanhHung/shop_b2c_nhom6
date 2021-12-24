@@ -74,7 +74,14 @@ class UserController extends Controller implements  ICrud
         return view('be.user.edit', compact('user'));
     }
 
-    public function delete(){
-
+    public function delete($id)
+    {
+        try {
+            $user = User::find($id);
+            $user->delete();
+        }   catch (\Exception $exception){
+            return redirect()->back()->with('error',"Delete failed");
+        }
+        return redirect()->back()->with('success',"Delete successfully");
     }
 }

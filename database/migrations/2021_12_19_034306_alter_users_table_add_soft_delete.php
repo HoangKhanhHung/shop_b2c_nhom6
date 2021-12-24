@@ -14,6 +14,9 @@ class AlterUsersTableAddSoftDelete extends Migration
     public function up()
     {
         //
+        Schema::table('user',function (Blueprint $table){
+            $table->softDeletes();
+        });
     }
 
     /**
@@ -24,5 +27,8 @@ class AlterUsersTableAddSoftDelete extends Migration
     public function down()
     {
         //
+        Schema::table('user',function (Blueprint $table){
+            $table->dropSoftDeletes();
+        });
     }
 }
