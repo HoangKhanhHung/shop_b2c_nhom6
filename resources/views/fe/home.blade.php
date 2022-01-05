@@ -91,28 +91,28 @@
                     <span class=" dropdown">
                         <a  href=""><span class="header-icon dropdown animate-dropdown "><i class="far fa-user"> <span style="font-family:'Century Gothic';font-size:15px;">&nbsp  {{Auth::user()->username}}</span></i></a>
                             <div class="dropdown-content " style="font-size: 15px;">
-                                <a href="#">Quản lí sản phẩm</a>
-                                <a href="#">Quản lí đơn hàng</a>
-                                <a href="#" data-toggle="tooltip" title="Log out"><i class="glyphicon glyphicon-log-out"></i>&nbsp Log Out</a>
+                                <a href="{{route('manage')}}">Quản lí sản phẩm</a>
+                                <a href="{{route('order')}}">Quản lí đơn hàng</a>
+                                <a href="{{route('logout')}}" data-toggle="tooltip" title="Log out"><i class="glyphicon glyphicon-log-out"></i>&nbsp Log Out</a>
                             </div>
                         </span>
                 @else
                     <span class="header-icon dropdown animate-dropdown">
-                            <a href="#" target="_parent">
+                            <a href="{{route('nmn.login')}}" target="_parent">
                                 <i class="far fa-user"></i>
                             </a>
                         </span>
                 @endif
                 &nbsp &nbsp &nbsp
                 <span class="header-icon dropdown animate-dropdown" >
-                            <a href="#">
+                            <a href="{{route('gio-hang')}}">
                                 <i class="fas fa-shopping-basket"></i>
                             </a><span class="badge badge-light"></span>
                         </span>
             </div>
         </div>
     </div>
-    <a href="#"><div class="head__logo" align=center>NMN</div></a>
+    <a href="{{route('trangchu')}}"><div class="head__logo" align=center>NMN</div></a>
 </div>
 <div class="head__nav">
     <div class="navbar-default" id ='navbar'>
@@ -123,26 +123,26 @@
                         <ul class ="navigation-desktop-menu">
                             <li class='navigation-tab'>
                                 <div class="dropdown">
-                                    <a href="#" class='dropbtn'>MAKEUP</a>
+                                    <a href="{{route('makeup')}}" class='dropbtn'>MAKEUP</a>
                                     <ul>
                                         <div class="dropdown-content">
                                             <div class="row makeup">
                                                 <div class="col-md-4">
                                                     <h5><strong>LIPSTICK</strong></h5>
-                                                    <a href="#">Son</a>
-                                                    <a href="#">Son dưỡng - Tẩy da chết</a>
+                                                    <a href="{{route('lips')}}">Son</a>
+                                                    <a href="{{route('DM')}}">Son dưỡng - Tẩy da chết</a>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <h5><strong>FACE MAKEUP</strong></h5>
-                                                    <a href="#">Kem nền - Kem lót - Kem che khuyết điểm</a>
-                                                    <a href="#">Phấn phủ - Phấn nén</a>
-                                                    <a href="#">Blusher</a>
+                                                    <a href="{{route('foundation')}}">Kem nền - Kem lót - Kem che khuyết điểm</a>
+                                                    <a href="{{route('powder')}}">Phấn phủ - Phấn nén</a>
+                                                    <a href="{{route('blusher')}}">Blusher</a>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <h5><strong>EYE MAKEUP</strong></h5>
-                                                    <a href="#">Lông mày</a>
-                                                    <a href="#">Mascara</a>
-                                                    <a href="#">Phấn mắt</a>
+                                                    <a href="{{route('eyes')}}">Lông mày</a>
+                                                    <a href="{{route('mas')}}">Mascara</a>
+                                                    <a href="{{route('EP')}}">Phấn mắt</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -151,15 +151,15 @@
                             </li>
                             <li class='navigation-tab'>
                                 <div class="dropdown">
-                                    <a href="#" class='dropbtn'>SKINCARE</a>
+                                    <a href="{{route('skincare')}}" class='dropbtn'>SKINCARE</a>
                                     <ul>
                                         <div class="dropdown-content">
-                                            <a href="#">Tẩy trang</a>
-                                            <a href="#">Sữa rửa mặt</a>
-                                            <a href="#">Tẩy tế bào chết</a>
-                                            <a href="#">Toner</a>
-                                            <a href="#">Serum</a>
-                                            <a href="#">Kem chống nắng</a>
+                                            <a href="{{route('CW')}}">Tẩy trang</a>
+                                            <a href="{{route('CG')}}">Sữa rửa mặt</a>
+                                            <a href="{{route('TDC')}}">Tẩy tế bào chết</a>
+                                            <a href="{{route('toner')}}">Toner</a>
+                                            <a href="{{route('serum')}}">Serum</a>
+                                            <a href="{{route('KCN')}}">Kem chống nắng</a>
                                         </div>
                                     </ul>
                                 </div>
@@ -167,12 +167,12 @@
 
                             <li class='navigation-tab'>
                                 <div class="dropdown">
-                                    <a href="#" class='dropbtn'>HAIR</a>
+                                    <a href="{{route('hair')}}" class='dropbtn'>HAIR</a>
                                     <ul>
                                         <div class="dropdown-content">
-                                            <a href="#">Sản phẩm nhuộm</a>
-                                            <a href="#">Ủ tóc</a>
-                                            <a href="#">Dầu gội & Dầu xả</a>
+                                            <a href="{{route('NT')}}">Sản phẩm nhuộm</a>
+                                            <a href="{{route('UT')}}">Ủ tóc</a>
+                                            <a href="{{route('DG')}}">Dầu gội & Dầu xả</a>
                                         </div>
                                     </ul>
                                 </div>
@@ -180,12 +180,12 @@
 
                             <li class='navigation-tab'>
                                 <div class="dropdown">
-                                    <a href="#" class='dropbtn'>BATH & BODY</a>
+                                    <a href="{{route('bath_body')}}" class='dropbtn'>BATH & BODY</a>
                                     <ul>
                                         <div class="dropdown-content">
-                                            <a href="#">Sữa tắm</a>
-                                            <a href="#">Sữa dưỡng thể</a>
-                                            <a href="#">Bath bomb</a>
+                                            <a href="{{route('ST')}}">Sữa tắm</a>
+                                            <a href="{{route('DT')}}">Sữa dưỡng thể</a>
+                                            <a href="{{route('BB')}}">Bath bomb</a>
                                         </div>
                                     </ul>
                                 </div>
@@ -193,7 +193,7 @@
 
                             <li class='navigation-tab'>
                                 <div class="dropdown">
-                                    <a href="#" class='dropbtn'>FUNCTIONAL FOODS</a>
+                                    <a href=" {{route('functional_foods')}}" class='dropbtn'>FUNCTIONAL FOODS</a>
                                 </div>
                             </li>
 
@@ -207,7 +207,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="nav__right">
-                        <form action="#" role="search" class="box">
+                        <form action="{{route('search')}}" role="search" class="box">
                             <input type="search" name="search" placeholder="Search here" class="input_search" />
                             <button style="border:none; background-color:white; margin-right:15px;"><i class='fas fa-search' style='font-size:15px'></i></button>
                         </form>
