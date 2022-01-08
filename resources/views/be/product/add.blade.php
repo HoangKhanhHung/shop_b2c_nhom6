@@ -8,7 +8,7 @@
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
-                <form method="post" action="{{route('admin.product.doAdd')}}">
+                <form method="post" action="{{route('admin.product.doAdd')}}" enctype="multipart/form-data">
                     @csrf
                     <div class="card-body">
                         <div class="preview-images">
@@ -18,7 +18,7 @@
                             <label for="exampleInputFile">Images</label>
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" name="images" multiple class="images-input custom-file-input"
+                                    <input type="file" name="images[]" multiple class="images-input custom-file-input"
                                            id="exampleInputFile">
                                     <label class="custom-file-label" for="exampleInputFile">Choose Image</label>
                                 </div>
@@ -43,7 +43,7 @@
 
                         <div class="form-group">
                             <label>Content</label>
-                            <textarea name="content" class="form-control" placeholder="Enter Content"></textarea>
+                            <textarea name="txt-content" class="form-control txt-content" placeholder="Enter Content"></textarea>
                         </div>
 
                         <div class="form-group">
@@ -60,9 +60,10 @@
 
                         <div>
                             <label>Discount Type</label>
-                            <select class="form-control">
+                            <select class="form-control" name="discount_type">
                                 <option value="1">Percentage</option>
                                 <option value="2">Direct Amount</option>
+
                             </select>
                         </div>
 
@@ -137,7 +138,11 @@
             justify-content: center;
             items-align: center;
         }
+        .txt-content{
+            height: 500px;
+        }
     </style>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
 
         let filesAmount = [];
@@ -175,5 +180,11 @@
         $('.images-input').on('change', function () {
             imagesPreview(this, '.preview-images');
         });
+    </script>
+    <script>
+        tinymce.init({
+            selector:'.txt-content',
+            height:'500'
+        })
     </script>
 @endsection

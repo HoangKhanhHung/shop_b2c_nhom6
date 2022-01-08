@@ -4,7 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Image;
 use Illuminate\Http\Request;
+
+use App\Models\Product;
+use mysql_xdevapi\Exception;
 
 class ProductController extends Controller implements ICrud
 {
@@ -27,11 +31,52 @@ class ProductController extends Controller implements ICrud
     {
         // TODO: Implement doAdd() method.
         $name = $request->name;
+        $categoryId=$request->category_id;
+        $content=$request->input('txt-content');
+        $price=$request->price;
+        $brandId=$request->brand_id ?? 0;
+        $discountType=$request->discount_type;
+        $metaKeyword=$request->meta_keyword;
+        $metaContent=$request->meta_content;
+        $metaDescription=$request->meta_description;
+        $shortDescription=$request->short_description;
+
         try {
-            Product::create([
+            $product=product::create([
                 'name' => $name,
+                'content'=>htmlentities($content),
+                'price'=>$price,
+                'brand_id'=>$brandId,
+                'discount_amount'=>0,
+                'discount_type'=>$discountType,
+                'meta_keyword'=>$metaKeyword,
+                'meta_description'=>$metaDescription,
+                'meta_content'=>$metaContent,
+                'shor_description'=>$shortDescription,
+                'category_id'=>$categoryId
             ]);
+            if($request->hasFile('images')){
+                $images = $request->file('images');
+                $i=0;
+                foreach ($images as $image){
+                    $newFileName=time().$i.'.'.$image->getClientOriginalName();
+                    try {
+                        $image->storeAs('images/products',
+                            $newFileName,'public');
+                        Image::create([
+                            'product_id' => $product->id,
+                            'path' => 'storage/images/products' . $newFileName,
+                            'is_preview' => $i == 0 ? 1 : 0
+
+                        ]);
+                    }catch (Exception $exception){
+                        dd($exception->getMessage());
+                    }
+                    $i++;
+                }
+            }
         } catch (\Exception $exception) {
+
             return redirect()->back()->with('error', "Add failed");
         }
         //chuyển hướng về trang  danh sách
@@ -42,7 +87,8 @@ class ProductController extends Controller implements ICrud
     public function edit($id)
     {
         // TODO: Implement edit() method.
-        $category = Product::find($id);//lấy ra product có id là $id truyền vào
+        $product = Product::find($id);//lấy ra product có id là $id truyền vào
+
         return view('be.product.edit', compact('product'));
     }
 
