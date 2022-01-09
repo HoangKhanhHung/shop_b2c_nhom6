@@ -22,4 +22,30 @@ class Product extends Model
         'short_description',
         'category_id'
     ];
+
+//    public function brand()
+//    {
+//        return $this->belongsTo('App\Model\Brand');
+//    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function images()
+    {
+        return $this->hasMany(Image::class);
+    }
+
+    public function image()
+    {
+        return $this->hasOne(Image::class);
+    }
+
+    public function preview()
+    {
+        return $this->hasOne(Image::class)
+            ->where('is_preview', 1);
+    }
 }

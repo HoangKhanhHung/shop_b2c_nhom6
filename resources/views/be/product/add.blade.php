@@ -8,7 +8,9 @@
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
-                <form method="post" action="{{route('admin.product.doAdd')}}" enctype="multipart/form-data">
+                <form method="post"
+                      enctype="multipart/form-data"
+                      action="{{route('admin.product.doAdd')}}">
                     @csrf
                     <div class="card-body">
                         <div class="preview-images">
@@ -43,7 +45,8 @@
 
                         <div class="form-group">
                             <label>Content</label>
-                            <textarea name="txt-content" class="form-control txt-content" placeholder="Enter Content"></textarea>
+                            <textarea name="txt-content" class="form-control txt-content"
+                                      placeholder="Enter Content"></textarea>
                         </div>
 
                         <div class="form-group">
@@ -60,16 +63,21 @@
 
                         <div>
                             <label>Discount Type</label>
-                            <select class="form-control" name="discount_type">
+                            <select name="discount_type" class="form-control">
                                 <option value="1">Percentage</option>
                                 <option value="2">Direct Amount</option>
-
                             </select>
+                        </div>
+
+                        <div>
+                            <label>Discount Amount</label>
+                            <input type="number" name="discount_amount" class="form-control"
+                                   placeholder="Enter Discount Amount">
                         </div>
 
                         <div class="form-group">
                             <label>Meta Keyword</label>
-                            <input type="text" name="meta_keyword" class="form-control" placeholder="Enter name">
+                            <input type="text" name="meta_keyword" class="form-control" placeholder="Meta Keyword">
                         </div>
 
                         <div class="form-group">
@@ -79,7 +87,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label>Meta Content</label>
+                            <label>Meta Description</label>
                             <input type="text" name="meta_description" class="form-control"
                                    placeholder="Enter Meta Description">
                         </div>
@@ -98,9 +106,7 @@
                 </form>
             </div>
         </div>
-
     </div>
-
 @endsection
 
 @section('bread-crumb')
@@ -138,7 +144,8 @@
             justify-content: center;
             items-align: center;
         }
-        .txt-content{
+
+        .txt-content {
             height: 500px;
         }
     </style>
@@ -146,6 +153,7 @@
     <script>
 
         let filesAmount = [];
+
         function removeImage(i) {
             const fileListArr = Array.from(filesAmount);
             fileListArr.splice(i);
@@ -169,7 +177,7 @@
                         node.style.position = 'relative';
                         node.classList.add('img-item');
                         node.innerHTML = `<img src="${event.target.result}" alt="Image" style="width:150px;height:100px;"><span class="remove-img">
-                        <div>x</div></span>`;
+<div>x</div></span>`;
                         $(placeToInsertImagePreview).append(node);
                     }
                     reader.readAsDataURL(input.files[i]);
@@ -180,11 +188,13 @@
         $('.images-input').on('change', function () {
             imagesPreview(this, '.preview-images');
         });
+
+
     </script>
     <script>
         tinymce.init({
-            selector:'.txt-content',
-            height:'500'
+            selector: '.txt-content',
+            height: '500'
         })
     </script>
 @endsection
