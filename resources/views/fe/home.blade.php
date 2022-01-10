@@ -538,7 +538,7 @@
                 <div class="col-md-3">
                     <div class="nav__right">
                         <form action="" role="search" class="box">
-                            <input type="search" name="search" placeholder="Search here" class="input_search" />
+                            <input type="search" name="search" placeholder="Tìm kiếm" class="input_search" />
                             <button style="border:none; background-color:white; margin-right:15px;"><i class='fas fa-search' style='font-size:15px'></i></button>
                         </form>
                     </div>
@@ -552,20 +552,17 @@
     <div class="slideshow-container">
 
         <div class="myslide fade">
-            <div class="numbertext">1 / 3</div>
-            <img src="/resources/views/images/1.jpg" style="width:100%">
+            <img src="https://scontent.fhph1-3.fna.fbcdn.net/v/t39.30808-6/271544865_1105234056977280_2286162424717979173_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=dbeb18&_nc_ohc=Y8dF7HcbSuAAX-11ZkV&_nc_ht=scontent.fhph1-3.fna&oh=00_AT8e1penvmg96MLpJBdYmk4DSZCAV_qkNDShYSkeDVCJTg&oe=61E0E718">
             <div class="text"></div>
         </div>
 
         <div class="myslide fade">
-            <div class="numbertext">2 / 3</div>
-            <img src="https://www.paulaschoice.com/on/demandware.static/-/Library-Sites-paulachoice/default/dwc25bdc5b/images/homepage-new/us_190717_desktop_panel-b_2010-review.jpg" style="width:100%">
+            <img src="https://scontent.fhph1-1.fna.fbcdn.net/v/t39.30808-6/271693260_1105250966975589_5847007318817523028_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=dbeb18&_nc_ohc=LydgiYx8wToAX85gQGO&_nc_ht=scontent.fhph1-1.fna&oh=00_AT8cEEVvJLXcYC_DgA3tcvK24sZS3ibN4Lybn5q8qNEEZA&oe=61E186DC">
             <div class="text"></div>
         </div>
 
         <div class="myslide fade">
-            <div class="numbertext">3 / 3</div>
-            <img src="https://www.shiseido.com.vn/on/demandware.static/-/Sites-shiseido_global_vn-Library/default/dw62c81aad/images/home/slide/HOME_E-series_Product_desktop_A1.jpg" style="width:100%">
+            <img src="https://scontent.fhph2-1.fna.fbcdn.net/v/t39.30808-6/271636630_1105244553642897_8662135113000007254_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=dbeb18&_nc_ohc=A2-NGFMAQ40AX8Gn3aa&_nc_ht=scontent.fhph2-1.fna&oh=00_AT_VD-4lP-gDfGQffOmTPN4di1NKNFarYaVKDc-LMm1TEw&oe=61E0EE31">
             <div class="text"></div>
         </div>
 
