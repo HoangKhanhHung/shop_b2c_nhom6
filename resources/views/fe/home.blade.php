@@ -17,6 +17,75 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/master.css') }}"/>
     <title>Thời Trang Cao Cấp 10K</title>
     <style>
+        /*body{*/
+        /*    margin: 0;*/
+        /*    padding: 0;*/
+        /*    display: flex;*/
+        /*    justify-content: center;*/
+        /*    align-items: center;*/
+        /*    height: 100vh;*/
+        /*    background: #112c38;*/
+        /*}*/
+
+        ul{
+            /*margin-bottom: 0px;*/
+            margin-top: -13px;
+            padding: 0;
+            display: flex;
+            margin-left: 80px;
+        }
+
+        ul li{
+            list-style: none;
+            margin: 0 50px;
+            transition: 0.5s;
+        }
+
+        ul li a{
+            display: block;
+            position: relative;
+            text-decoration: none;
+            padding: 0px;
+            font-size: 27px;
+            font-family: 'Century Gothic';
+            color: #030000;
+            transition: .5s;
+            /* text-transform: uppercase; */
+        }
+
+        ul:hover li a{
+            transform: scale(1);
+            opacity: .2;
+            filter: blur(1px);
+        }
+
+        ul li a:hover{
+            transform: scale(1.5);
+            opacity: 1;
+            filter: blur(0);
+        }
+
+        ul li a::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #89ffe3;
+            transition: transform .5s;
+            transform-origin: right;
+            transform: scaleX(0);
+            z-index: -1;
+        }
+
+        ul li a:hover::before{
+            transition: transform .5s;
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+
+
         .content{
             margin-top:0px;
             margin-left:10px;
@@ -42,10 +111,9 @@
             font-size: 20px;
             margin-right: 80px;
         }
-        .head__logo {
-            margin-top: 8px;
-            font-size: 60px;
-            font-family: "CASTELLAR";
+        .head__logo {;
+            font-size: 70px;
+            font-family: "Copperplate", Fantasy;
         }
         .container {
             width: 1400px;
@@ -62,9 +130,9 @@
             display: flex;
             align-items: center;
             width:260px;
-            margin-top:14px;
+            margin-top:17px;
             margin-left:25px;
-            margin-bottom: 14px;
+            margin-bottom: 15px;
             float:left;
             padding-left: 0;
         }
@@ -73,7 +141,7 @@
             outline: none;
             border: none;
             padding-left: 20px;
-            color: black;
+            color: #dc1010;
             width: 230px;
         }
         b{
@@ -122,7 +190,6 @@
         }
 
         ul li ul.dropdown{
-            /* Set width of the dropdown */
             float:left;
             background: white;
             display: inline-block;
@@ -131,7 +198,7 @@
             left: 0;
         }
         ul li:hover ul.dropdown{
-            display: block;	/* Display the dropdown */
+            display: block;
 
         }
         ul li ul.dropdown li{
@@ -143,7 +210,7 @@
             background-color: #f8f8f8;
             min-width:200px;
             left:0;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            box-shadow: 0px 8px 16px 0px rgba(21, 1, 1, 0.2);
             z-index: 1;
             font-family:"Time New Roman";
         }
@@ -171,26 +238,23 @@
             background-color: #f8f8f8;
         }
         .dropbtn{
-            /* margin-left: 0px; */
+
             font-size: 17px;
         }
         *{box-sizing: border-box;}
 
-        /* slideshow container */
         {box-sizing: border-box;}
         body {font-family: Verdana, sans-serif;}
         .myslide {display: none;}
         img {vertical-align: middle;
             height: 350px;}
 
-        /* Slideshow container */
         .slideshow-container {
             max-width: 1400px;
             position: relative;
             margin: auto;
         }
 
-        /* Caption text */
         .text {
             color: #f2f2f2;
             font-size: 15px;
@@ -201,7 +265,6 @@
             text-align: center;
         }
 
-        /* Number text (1/3 etc) */
         .numbertext {
             color: #f2f2f2;
             font-size: 12px;
@@ -210,7 +273,6 @@
             top: 0;
         }
 
-        /* The dots/bullets/indicators */
         .dot {
             height: 15px;
             width: 15px;
@@ -225,7 +287,6 @@
             background-color: #717171;
         }
 
-        /* Fading animation */
         .fade {
             -webkit-animation-name: fade;
             -webkit-animation-duration: 4.85s;
@@ -243,7 +304,6 @@
             to {opacity: 1}
         }
 
-        /* On smaller screens, decrease text size */
         @media only screen and (max-width: 300px) {
             .text {font-size: 11px}
         }
@@ -450,89 +510,98 @@
             <div class="row">
                 <div class="col-md-9" align="center">
                     <div class="nav__left">
-                        <ul class ="navigation-desktop-menu">
-                            <li class='navigation-tab'>
-                                <div class="dropdown">
-                                    <a href="" class='dropbtn'>SẢN PHẨM</a>
-                                    <ul>
-                                        <div class="dropdown-content">
-                                            <div class="row makeup">
-                                                <div class="col-md-4">
-                                                    <h5><strong>LIPSTICK</strong></h5>
-                                                    <a href="">Son</a>
-                                                    <a href="">Son dưỡng - Tẩy da chết</a>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <h5><strong>FACE MAKEUP</strong></h5>
-                                                    <a href="">Kem nền - Kem lót - Kem che khuyết điểm</a>
-                                                    <a href="">Phấn phủ - Phấn nén</a>
-                                                    <a href="">Blusher</a>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <h5><strong>EYE MAKEUP</strong></h5>
-                                                    <a href="">Lông mày</a>
-                                                    <a href="">Mascara</a>
-                                                    <a href="">Phấn mắt</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class='navigation-tab'>
-                                <div class="dropdown">
-                                    <a href="" class='dropbtn'>SKINCARE</a>
-                                    <ul>
-                                        <div class="dropdown-content">
-                                            <a href="">Tẩy trang</a>
-                                            <a href="">Sữa rửa mặt</a>
-                                            <a href="">Tẩy tế bào chết</a>
-                                            <a href="">Toner</a>
-                                            <a href="">Serum</a>
-                                            <a href="">Kem chống nắng</a>
-                                        </div>
-                                    </ul>
-                                </div>
-                            </li>
+                        <section>
+                            <ul>
+                                <li><a href="#" data-text="Home">Home</a></li>
+                                <li><a href="#" data-text="About">About</a></li>
+                                <li><a href="#" data-text="Services">Services</a></li>
+                                <li><a href="#" data-text="Team">Team</a></li>
+                                <li><a href="#" data-text="Contact">Contact</a></li>
+                            </ul>
+                        </section>
+{{--                        <ul class ="navigation-desktop-menu">--}}
+{{--                            <li class='navigation-tab'>--}}
+{{--                                <div class="dropdown">--}}
+{{--                                    <a href="" class='dropbtn'>SẢN PHẨM</a>--}}
+{{--                                    <ul>--}}
+{{--                                        <div class="dropdown-content">--}}
+{{--                                            <div class="row makeup">--}}
+{{--                                                <div class="col-md-4">--}}
+{{--                                                    <h5><strong>LIPSTICK</strong></h5>--}}
+{{--                                                    <a href="">Son</a>--}}
+{{--                                                    <a href="">Son dưỡng - Tẩy da chết</a>--}}
+{{--                                                </div>--}}
+{{--                                                <div class="col-md-4">--}}
+{{--                                                    <h5><strong>FACE MAKEUP</strong></h5>--}}
+{{--                                                    <a href="">Kem nền - Kem lót - Kem che khuyết điểm</a>--}}
+{{--                                                    <a href="">Phấn phủ - Phấn nén</a>--}}
+{{--                                                    <a href="">Blusher</a>--}}
+{{--                                                </div>--}}
+{{--                                                <div class="col-md-4">--}}
+{{--                                                    <h5><strong>EYE MAKEUP</strong></h5>--}}
+{{--                                                    <a href="">Lông mày</a>--}}
+{{--                                                    <a href="">Mascara</a>--}}
+{{--                                                    <a href="">Phấn mắt</a>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    </ul>--}}
+{{--                                </div>--}}
+{{--                            </li>--}}
+{{--                            <li class='navigation-tab'>--}}
+{{--                                <div class="dropdown">--}}
+{{--                                    <a href="" class='dropbtn'>SKINCARE</a>--}}
+{{--                                    <ul>--}}
+{{--                                        <div class="dropdown-content">--}}
+{{--                                            <a href="">Tẩy trang</a>--}}
+{{--                                            <a href="">Sữa rửa mặt</a>--}}
+{{--                                            <a href="">Tẩy tế bào chết</a>--}}
+{{--                                            <a href="">Toner</a>--}}
+{{--                                            <a href="">Serum</a>--}}
+{{--                                            <a href="">Kem chống nắng</a>--}}
+{{--                                        </div>--}}
+{{--                                    </ul>--}}
+{{--                                </div>--}}
+{{--                            </li>--}}
 
-                            <li class='navigation-tab'>
-                                <div class="dropdown">
-                                    <a href="" class='dropbtn'>HAIR</a>
-                                    <ul>
-                                        <div class="dropdown-content">
-                                            <a href="">Sản phẩm nhuộm</a>
-                                            <a href="">Ủ tóc</a>
-                                            <a href="">Dầu gội & Dầu xả</a>
-                                        </div>
-                                    </ul>
-                                </div>
-                            </li>
+{{--                            <li class='navigation-tab'>--}}
+{{--                                <div class="dropdown">--}}
+{{--                                    <a href="" class='dropbtn'>HAIR</a>--}}
+{{--                                    <ul>--}}
+{{--                                        <div class="dropdown-content">--}}
+{{--                                            <a href="">Sản phẩm nhuộm</a>--}}
+{{--                                            <a href="">Ủ tóc</a>--}}
+{{--                                            <a href="">Dầu gội & Dầu xả</a>--}}
+{{--                                        </div>--}}
+{{--                                    </ul>--}}
+{{--                                </div>--}}
+{{--                            </li>--}}
 
-                            <li class='navigation-tab'>
-                                <div class="dropdown">
-                                    <a href="" class='dropbtn'>BATH & BODY</a>
-                                    <ul>
-                                        <div class="dropdown-content">
-                                            <a href="">Sữa tắm</a>
-                                            <a href="">Sữa dưỡng thể</a>
-                                            <a href="">Bath bomb</a>
-                                        </div>
-                                    </ul>
-                                </div>
-                            </li>
+{{--                            <li class='navigation-tab'>--}}
+{{--                                <div class="dropdown">--}}
+{{--                                    <a href="" class='dropbtn'>BATH & BODY</a>--}}
+{{--                                    <ul>--}}
+{{--                                        <div class="dropdown-content">--}}
+{{--                                            <a href="">Sữa tắm</a>--}}
+{{--                                            <a href="">Sữa dưỡng thể</a>--}}
+{{--                                            <a href="">Bath bomb</a>--}}
+{{--                                        </div>--}}
+{{--                                    </ul>--}}
+{{--                                </div>--}}
+{{--                            </li>--}}
 
-                            <li class='navigation-tab'>
-                                <div class="dropdown">
-                                    <a href="" class='dropbtn'>FUNCTIONAL FOODS</a>
-                                </div>
-                            </li>
+{{--                            <li class='navigation-tab'>--}}
+{{--                                <div class="dropdown">--}}
+{{--                                    <a href="" class='dropbtn'>FUNCTIONAL FOODS</a>--}}
+{{--                                </div>--}}
+{{--                            </li>--}}
 
-                            <li class='navigation-tab'>
-                                <div class="dropdown">
-                                    <a href="" class='dropbtn'>BEAUTY TOOLS</a>
-                                </div>
-                            </li>
-                        </ul>
+{{--                            <li class='navigation-tab'>--}}
+{{--                                <div class="dropdown">--}}
+{{--                                    <a href="" class='dropbtn'>BEAUTY TOOLS</a>--}}
+{{--                                </div>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -546,7 +615,6 @@
             </div>
         </div>
     </div>
-</div>
 </div>
 @section('content')
     <div class="slideshow-container">
