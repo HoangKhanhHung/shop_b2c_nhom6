@@ -1,4 +1,3 @@
-
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
@@ -48,7 +47,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{route('admin.user.list')}}" class="nav-link active">
+                            <a href="{{route('admin.user.list')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>List User</p>
                             </a>
@@ -66,15 +65,15 @@
                     <a href="#" class="nav-link active">
                         <i class="nav-icon fas fa-list"></i>
                         <p>
-                            User
+                            Category
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{route('admin.category.list')}}" class="nav-link active">
+                            <a href="{{route('admin.category.list')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>List User</p>
+                                <p>List Category</p>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -86,16 +85,78 @@
                     </ul>
                 </li>
 
+                <li class="nav-item menu-open">
+                    <a href="#" class="nav-link active">
+                        <i class="nav-icon fas fa-list"></i>
+                        <p>
+                            Product
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('admin.product.list')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>List Product</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('admin.product.add')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add Product</p>
+                            </a>
+                        </li>
 
-                {{--                    <li class="nav-item">--}}
-                {{--                        <a href="#" class="nav-link">--}}
-                {{--                            <i class="nav-icon fas fa-th"></i>--}}
-                {{--                            <p>--}}
-                {{--                                Simple Link--}}
-                {{--                                <span class="right badge badge-danger">New</span>--}}
-                {{--                            </p>--}}
-                {{--                        </a>--}}
-                {{--                    </li>--}}
+                    </ul>
+                </li>
+
+                <li class="nav-item menu-open">
+                    <a href="#" class="nav-link active">
+                        <i class="nav-icon fas fa-list"></i>
+                        <p>
+                            Variant
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('admin.variant.list')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>List Variant</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('admin.variant.add')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add Variant</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{route('admin.variant_value.list')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>List Variant Value</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('admin.variant_value.add')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add Variant Value</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                {{--                  <li class="nav-item">
+                                      <a href="#" class="nav-link">
+                                          <i class="nav-icon fas fa-th"></i>
+                                          <p>
+                                              Simple Link
+                                              <span class="right badge badge-danger">New</span>
+                                          </p>
+                                      </a>
+                                  </li>--}}
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

@@ -16,9 +16,9 @@ class FeController extends Controller
     public function home()
     {
         $lastProducts = Product::orderBy('id', 'DESC')->paginate(4);
-        $topViewProducts = Product::orderBy('views', 'DESC')->paginate(4);
-        $topSoldProducts = Product::orderBy('sold', 'DESC')->paginate(4);
-        return view('fe.home',compact('lastProducts','topSoldProducts','topViewProducts'));
+        $topNameProducts = Product::orderBy('name', 'DESC')->paginate(4);
+        $topContentProducts = Product::orderBy('content', 'DESC')->paginate(4);
+        return view('fe.home',compact('lastProducts','topContentProducts','topNameProducts'));
     }
 
 

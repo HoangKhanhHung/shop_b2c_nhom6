@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,60 +15,449 @@
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/master.css') }}"/>
-    <title>NMN</title>
+    <title>Thời Trang Cao Cấp 10K</title>
     <style>
-        .dropdown-content {
-            font-family: "Century Gothic";
+        /*body{*/
+        /*    margin: 0;*/
+        /*    padding: 0;*/
+        /*    display: flex;*/
+        /*    justify-content: center;*/
+        /*    align-items: center;*/
+        /*    height: 100vh;*/
+        /*    background: #112c38;*/
+        /*}*/
+
+        ul{
+            /*margin-bottom: 0px;*/
+            margin-top: -13px;
+            padding: 0;
+            display: flex;
+            margin-left: 80px;
         }
-        #content{
-            font-family:"Segoe UI";
+
+        ul li{
+            list-style: none;
+            margin: 0 50px;
+            transition: 0.5s;
         }
-        .single-item img {
-            width: 320px;
-            height: 320px;
-            object-fit: cover !important;
-        }
-        .ribbon-wrapper {
-            width: 85px;
-            height: 88px;
-            overflow: hidden;
-            position: absolute;
-            top: -3px;
-            right: -3px;
-        }
-        .ribbon {
-            font: bold 15px Sans-Serif;
-            color: #DDDDDD;
-            text-align: center;
-            text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
-            -webkit-transform: rotate(45deg);
-            -moz-transform:    rotate(45deg);
-            -ms-transform:     rotate(45deg);
-            -o-transform:      rotate(45deg);
+
+        ul li a{
+            display: block;
             position: relative;
-            padding: 7px 0;
-            left: -5px;
-            top: 15px;
+            text-decoration: none;
+            padding: 0px;
+            font-size: 27px;
+            font-family: 'Century Gothic';
+            color: #030000;
+            transition: .5s;
+            /* text-transform: uppercase; */
+        }
+
+        ul:hover li a{
+            transform: scale(1);
+            opacity: .2;
+            filter: blur(1px);
+        }
+
+        ul li a:hover{
+            transform: scale(1.5);
+            opacity: 1;
+            filter: blur(0);
+        }
+
+        ul li a::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #89ffe3;
+            transition: transform .5s;
+            transform-origin: right;
+            transform: scaleX(0);
+            z-index: -1;
+        }
+
+        ul li a:hover::before{
+            transition: transform .5s;
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+
+
+        .content{
+            margin-top:0px;
+            margin-left:10px;
+        }
+        .service-header{
+            background-color:#ddd;
+            font-size: 15px;
+            width:100%;
+            height:40px;
+            font-family:"Century Gothic";
+            padding: 6.25px;
+        }
+        .contact{
+            margin-left:10px;
+            font-size:17px;
+        }
+        .email {
+            margin-left: 30px;
+            font-size: 17px;
+        }
+        .header-icons {
+            float: right;
+            font-size: 20px;
+            margin-right: 80px;
+        }
+        .head__logo {;
+            font-size: 70px;
+            font-family: "Copperplate", Fantasy;
+        }
+        .container {
+            width: 1400px;
+        }
+        a{
+            text-decoration:none;
+            color:black;
+        }
+        .box {
+            height: 40px;
+            border:1px solid grey;
+            background-color: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            width:260px;
+            margin-top:17px;
+            margin-left:25px;
+            margin-bottom: 15px;
+            float:left;
+            padding-left: 0;
+        }
+        .input_search{
+            background: none;
+            outline: none;
+            border: none;
+            padding-left: 20px;
+            color: #dc1010;
+            width: 230px;
+        }
+        b{
+            font-size:30px;
+        }
+
+        .NMN{
+            float:right;
+            width:50%;
+        }
+        .list{
+            color:black;
             width: 120px;
-            background-color: #DDDDDD;
-            color: #4F4F4F;
-            -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
-            -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
-            box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+            line-height:30px;
+            display:inline-block;
         }
-        .ribbon:before, .ribbon:after {
-            content: "";
-            border-top:   5px solid #DDDDDD;
-            border-left:  5px solid #DDDDDD;
-            border-right: 5px solid #DDDDDD;
-            position:absolute;
-            bottom: -3px;
+        a:hover{
+            text-decoration:none;
+            color:black;
         }
-        .ribbon:before {
+        a{
+            color:black;
+            text-decoration:none;
+        }
+        .navbar{
+            border-bottom: 1px solid #f1f1f1;
+            margin: 30px 0 0 0;
+            position: fixed;
+            top:0;
+        }
+        .navbar a:hover{
+            background-color: white;
+        }
+        .navigation-desktop-menu{
+            list-style: none;
+            font-family:"Century Gothic";
+            font-size: 16.25px;
+            margin-top: 12px;
+            margin-bottom: 0px;
+        }
+
+
+        .dropdown{
+            text-align:center;
+
+        }
+
+        ul li ul.dropdown{
+            float:left;
+            background: white;
+            display: inline-block;
+            position: relative;
+            z-index: 999;
             left: 0;
         }
-        .ribbon:after {
-            right: 0;
+        ul li:hover ul.dropdown{
+            display: block;
+
+        }
+        ul li ul.dropdown li{
+            display: block;
+        }
+        .dropdown-content{
+            display:none;
+            position: absolute;
+            background-color: #f8f8f8;
+            min-width:200px;
+            left:0;
+            box-shadow: 0px 8px 16px 0px rgba(21, 1, 1, 0.2);
+            z-index: 1;
+            font-family:"Time New Roman";
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            width:100%;
+            height:auto;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            width: 100%;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #f8f8f8;
+        }
+        .dropbtn{
+
+            font-size: 17px;
+        }
+        *{box-sizing: border-box;}
+
+        {box-sizing: border-box;}
+        body {font-family: Verdana, sans-serif;}
+        .myslide {display: none;}
+        img {vertical-align: middle;
+            height: 350px;}
+
+        .slideshow-container {
+            max-width: 1400px;
+            position: relative;
+            margin: auto;
+        }
+
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 4.85s;
+            animation-name: fade;
+            animation-duration: 4.85s;
+        }
+
+        @-webkit-keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        @media only screen and (max-width: 300px) {
+            .text {font-size: 11px}
+        }
+        .title{
+            margin: 30px 0;
+        }
+        .column{
+            float:left;
+            width: 100%;
+            margin: 0 15px;
+        }
+        h5{
+            text-align: left;
+            margin-left:15px;
+        }
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        #navbar .dropbtn:hover {
+            background-color: #f8f8f8;
+            color: black;
+        }
+
+        #navbar a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .content {
+            padding: 16px;
+        }
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        .sticky + .content {
+            padding-top: 60px;
+        }
+        .navigation-tab {
+            display: inline-block;
+            margin-left: 50px;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+        .navbar-default{
+            z-index:111;
+        }
+        .row .makeup{
+            display:flex;
+            width:600px;
+        }
+
+
+        .product_info{
+            background-color:white;
+        }
+        .product_info p{
+            margin:0;
+        }
+        .carousel-col img{
+            width: 270px;
+            height:330px;
+            object-fit: cover;
+        }
+        .myslide img{
+            object-fit:cover;
+        }
+
+
+        section {
+            padding-top: 30px;
+        }
+
+        section .section-title {
+            text-align: center;
+            color: #f8f8f8;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+        .col-footer{
+            max-width: 350px;
+            max-height: 300px;
+            margin-left: 80px;
+        }
+        #footer {
+            background: #f8f8f8 !important;
+        }
+        #footer h4{
+            padding-left: 10px;
+            padding-bottom: 6px;
+            margin-bottom: 20px;
+            color: black;
+            text-align: center;
+        }
+        #footer a {
+            color: black;
+            text-decoration: none !important;
+            background-color: transparent;
+            -webkit-text-decoration-skip: objects;
+        }
+        #footer ul.social li{
+            padding: 3px 0;
+        }
+        #footer ul.social li a i {
+            margin-right: 5px;
+            font-size:25px;
+            -webkit-transition: .5s all ease;
+            -moz-transition: .5s all ease;
+            transition: .5s all ease;
+        }
+        #footer ul.social li:hover a i {
+            font-size:30px;
+            margin-top:-10px;
+        }
+        #footer ul.social li a,
+        #footer ul.quick-links li a{
+            color: black;
+        }
+        #footer ul.social li a:hover{
+            color:#eeeeee;
+        }
+        #footer ul.quick-links li{
+            padding: 3px 0;
+            -webkit-transition: .5s all ease;
+            -moz-transition: .5s all ease;
+            transition: .5s all ease;
+        }
+        #footer ul.quick-links li:hover{
+            padding: 3px 0;
+            margin-left:5px;
+            font-weight:700;
+        }
+        #footer ul.quick-links li a i{
+            margin-right: 5px;
+        }
+        #footer ul.quick-links li:hover a i {
+            font-weight: 700;
+        }
+
+        @media (max-width:767px){
+            #footer h4 {
+                padding-left: 0;
+                border-left: transparent;
+                padding-bottom: 0px;
+                margin-bottom: 10px;
+            }
+        }
+        #icon-footer{
+            margin: 15px 0;
+        }
+        #icon-footer a{
+            align-content: center;
         }
     </style>
 </head>
@@ -80,136 +468,146 @@
         <div class="service-header">
                     <span class="contact">
                         <span class="glyphicon glyphicon-earphone"></span>
-                        <span>Customer Service: 0989018138</span>
+                        <span>Liên Hệ: 09 8888 6666</span>
                     </span>
             <span class="email">
                         <span class="fas fa-envelope"></span>
-                        <span>Email: thuann.nguyenn99@gmail.com</span>
+                        <span>Email: hotro@gmail.com</span>
                     </span>
             <div class="header-icons">
                 &nbsp &nbsp &nbsp
                 @if(Auth::check())
                     <span class=" dropdown">
-                        <a  href=""><span class="header-icon dropdown animate-dropdown "><i class="far fa-user"> <span style="font-family:'Century Gothic';font-size:15px;">&nbsp  {{Auth::user()->username}}</span></i></a>
+                        <a  href=""><span class="header-icon dropdown animate-dropdown "><i class="far fa-user">
+                                    <span style="font-family:'Century Gothic';font-size:15px;">&nbsp  {{Auth::user()->username}}</span></i></a>
                             <div class="dropdown-content " style="font-size: 15px;">
-                                <a href="{{route('manage')}}">Quản lí sản phẩm</a>
-                                <a href="{{route('order')}}">Quản lí đơn hàng</a>
-                                <a href="{{route('logout')}}" data-toggle="tooltip" title="Log out"><i class="glyphicon glyphicon-log-out"></i>&nbsp Log Out</a>
+                                <a href="">Quản lí sản phẩm</a>
+                                <a href="">Quản lí đơn hàng</a>
+                                <a href="" data-toggle="tooltip" title="Log out"><i class="glyphicon glyphicon-log-out"></i>&nbsp Log Out</a>
                             </div>
                         </span>
                 @else
                     <span class="header-icon dropdown animate-dropdown">
-                            <a href="{{route('nmn.login')}}" target="_parent">
+                            <a href="" target="_parent">
                                 <i class="far fa-user"></i>
                             </a>
                         </span>
                 @endif
                 &nbsp &nbsp &nbsp
                 <span class="header-icon dropdown animate-dropdown" >
-                            <a href="{{route('gio-hang')}}">
+                            <a href="">
                                 <i class="fas fa-shopping-basket"></i>
                             </a><span class="badge badge-light"></span>
                         </span>
             </div>
         </div>
     </div>
-    <a href="{{route('trangchu')}}"><div class="head__logo" align=center>THT</div></a>
+    <a href=""><div class="head__logo" align=center>10K</div></a>
 </div>
 <div class="head__nav">
     <div class="navbar-default" id ='navbar'>
         <div class="container">
             <div class="row">
-                <div class="col-md-9">
+                <div class="col-md-9" align="center">
                     <div class="nav__left">
-                        <ul class ="navigation-desktop-menu">
-                            <li class='navigation-tab'>
-                                <div class="dropdown">
-                                    <a href="{{route('makeup')}}" class='dropbtn'>QUẦN</a>
-                                    <ul>
-                                        <div class="dropdown-content">
-                                            <div class="row makeup">
-                                                <div class="col-md-4">
-                                                    <h5><strong>QUẦN ÂU</strong></h5>
-                                                    <a href="{{route('lips')}}">QUẦN PN</a>
-                                                    <a href="{{route('DM')}}">QUẦN ELEGANT</a>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <h5><strong>QUẦN KAKI</strong></h5>
-                                                    <a href="{{route('foundation')}}">QUẦN KAKI MODAL</a>
-                                                    <a href="{{route('powder')}}">QUẦN KAKI</a>
-                                                    <a href="{{route('blusher')}}">KAKI COTTON</a>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <h5><strong>EYE MAKEUP</strong></h5>
-                                                    <a href="{{route('eyes')}}">Lông mày</a>
-                                                    <a href="{{route('mas')}}">Mascara</a>
-                                                    <a href="{{route('EP')}}">Phấn mắt</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class='navigation-tab'>
-                                <div class="dropdown">
-                                    <a href="{{route('skincare')}}" class='dropbtn'>SKINCARE</a>
-                                    <ul>
-                                        <div class="dropdown-content">
-                                            <a href="{{route('CW')}}">Tẩy trang</a>
-                                            <a href="{{route('CG')}}">Sữa rửa mặt</a>
-                                            <a href="{{route('TDC')}}">Tẩy tế bào chết</a>
-                                            <a href="{{route('toner')}}">Toner</a>
-                                            <a href="{{route('serum')}}">Serum</a>
-                                            <a href="{{route('KCN')}}">Kem chống nắng</a>
-                                        </div>
-                                    </ul>
-                                </div>
-                            </li>
+                        <section>
+                            <ul>
+                                <li><a href="#" data-text="Home">Home</a></li>
+                                <li><a href="#" data-text="About">About</a></li>
+                                <li><a href="#" data-text="Services">Services</a></li>
+                                <li><a href="#" data-text="Team">Team</a></li>
+                                <li><a href="#" data-text="Contact">Contact</a></li>
+                            </ul>
+                        </section>
+{{--                        <ul class ="navigation-desktop-menu">--}}
+{{--                            <li class='navigation-tab'>--}}
+{{--                                <div class="dropdown">--}}
+{{--                                    <a href="" class='dropbtn'>SẢN PHẨM</a>--}}
+{{--                                    <ul>--}}
+{{--                                        <div class="dropdown-content">--}}
+{{--                                            <div class="row makeup">--}}
+{{--                                                <div class="col-md-4">--}}
+{{--                                                    <h5><strong>LIPSTICK</strong></h5>--}}
+{{--                                                    <a href="">Son</a>--}}
+{{--                                                    <a href="">Son dưỡng - Tẩy da chết</a>--}}
+{{--                                                </div>--}}
+{{--                                                <div class="col-md-4">--}}
+{{--                                                    <h5><strong>FACE MAKEUP</strong></h5>--}}
+{{--                                                    <a href="">Kem nền - Kem lót - Kem che khuyết điểm</a>--}}
+{{--                                                    <a href="">Phấn phủ - Phấn nén</a>--}}
+{{--                                                    <a href="">Blusher</a>--}}
+{{--                                                </div>--}}
+{{--                                                <div class="col-md-4">--}}
+{{--                                                    <h5><strong>EYE MAKEUP</strong></h5>--}}
+{{--                                                    <a href="">Lông mày</a>--}}
+{{--                                                    <a href="">Mascara</a>--}}
+{{--                                                    <a href="">Phấn mắt</a>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    </ul>--}}
+{{--                                </div>--}}
+{{--                            </li>--}}
+{{--                            <li class='navigation-tab'>--}}
+{{--                                <div class="dropdown">--}}
+{{--                                    <a href="" class='dropbtn'>SKINCARE</a>--}}
+{{--                                    <ul>--}}
+{{--                                        <div class="dropdown-content">--}}
+{{--                                            <a href="">Tẩy trang</a>--}}
+{{--                                            <a href="">Sữa rửa mặt</a>--}}
+{{--                                            <a href="">Tẩy tế bào chết</a>--}}
+{{--                                            <a href="">Toner</a>--}}
+{{--                                            <a href="">Serum</a>--}}
+{{--                                            <a href="">Kem chống nắng</a>--}}
+{{--                                        </div>--}}
+{{--                                    </ul>--}}
+{{--                                </div>--}}
+{{--                            </li>--}}
 
-                            <li class='navigation-tab'>
-                                <div class="dropdown">
-                                    <a href="{{route('hair')}}" class='dropbtn'>HAIR</a>
-                                    <ul>
-                                        <div class="dropdown-content">
-                                            <a href="{{route('NT')}}">Sản phẩm nhuộm</a>
-                                            <a href="{{route('UT')}}">Ủ tóc</a>
-                                            <a href="{{route('DG')}}">Dầu gội & Dầu xả</a>
-                                        </div>
-                                    </ul>
-                                </div>
-                            </li>
+{{--                            <li class='navigation-tab'>--}}
+{{--                                <div class="dropdown">--}}
+{{--                                    <a href="" class='dropbtn'>HAIR</a>--}}
+{{--                                    <ul>--}}
+{{--                                        <div class="dropdown-content">--}}
+{{--                                            <a href="">Sản phẩm nhuộm</a>--}}
+{{--                                            <a href="">Ủ tóc</a>--}}
+{{--                                            <a href="">Dầu gội & Dầu xả</a>--}}
+{{--                                        </div>--}}
+{{--                                    </ul>--}}
+{{--                                </div>--}}
+{{--                            </li>--}}
 
-                            <li class='navigation-tab'>
-                                <div class="dropdown">
-                                    <a href="{{route('bath_body')}}" class='dropbtn'>BATH & BODY</a>
-                                    <ul>
-                                        <div class="dropdown-content">
-                                            <a href="{{route('ST')}}">Sữa tắm</a>
-                                            <a href="{{route('DT')}}">Sữa dưỡng thể</a>
-                                            <a href="{{route('BB')}}">Bath bomb</a>
-                                        </div>
-                                    </ul>
-                                </div>
-                            </li>
+{{--                            <li class='navigation-tab'>--}}
+{{--                                <div class="dropdown">--}}
+{{--                                    <a href="" class='dropbtn'>BATH & BODY</a>--}}
+{{--                                    <ul>--}}
+{{--                                        <div class="dropdown-content">--}}
+{{--                                            <a href="">Sữa tắm</a>--}}
+{{--                                            <a href="">Sữa dưỡng thể</a>--}}
+{{--                                            <a href="">Bath bomb</a>--}}
+{{--                                        </div>--}}
+{{--                                    </ul>--}}
+{{--                                </div>--}}
+{{--                            </li>--}}
 
-                            <li class='navigation-tab'>
-                                <div class="dropdown">
-                                    <a href=" {{route('functional_foods')}}" class='dropbtn'>FUNCTIONAL FOODS</a>
-                                </div>
-                            </li>
+{{--                            <li class='navigation-tab'>--}}
+{{--                                <div class="dropdown">--}}
+{{--                                    <a href="" class='dropbtn'>FUNCTIONAL FOODS</a>--}}
+{{--                                </div>--}}
+{{--                            </li>--}}
 
-                            <li class='navigation-tab'>
-                                <div class="dropdown">
-                                    <a href="" class='dropbtn'>BEAUTY TOOLS</a>
-                                </div>
-                            </li>
-                        </ul>
+{{--                            <li class='navigation-tab'>--}}
+{{--                                <div class="dropdown">--}}
+{{--                                    <a href="" class='dropbtn'>BEAUTY TOOLS</a>--}}
+{{--                                </div>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="nav__right">
-                        <form action="{{route('search')}}" role="search" class="box">
-                            <input type="search" name="search" placeholder="Search here" class="input_search" />
+                        <form action="" role="search" class="box">
+                            <input type="search" name="search" placeholder="Tìm kiếm" class="input_search" />
                             <button style="border:none; background-color:white; margin-right:15px;"><i class='fas fa-search' style='font-size:15px'></i></button>
                         </form>
                     </div>
@@ -218,25 +616,21 @@
         </div>
     </div>
 </div>
-</div>
 @section('content')
     <div class="slideshow-container">
 
         <div class="myslide fade">
-            <div class="numbertext">1 / 3</div>
-            <img src="https://www.lancome.co.kr/dw/image/v2/AAWH_PRD/on/demandware.static/-/Sites-lancome-kr-Library/ko_KR/dwb5b7f4c9/homepage/main_carousel_d/190228_Main_Carousel_UV_PC.jpg?sw=1920&sh=687&sm=fit" style="width:100%">
+            <img src="https://scontent.fhph1-3.fna.fbcdn.net/v/t39.30808-6/271544865_1105234056977280_2286162424717979173_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=dbeb18&_nc_ohc=Y8dF7HcbSuAAX-11ZkV&_nc_ht=scontent.fhph1-3.fna&oh=00_AT8e1penvmg96MLpJBdYmk4DSZCAV_qkNDShYSkeDVCJTg&oe=61E0E718">
             <div class="text"></div>
         </div>
 
         <div class="myslide fade">
-            <div class="numbertext">2 / 3</div>
-            <img src="https://www.paulaschoice.com/on/demandware.static/-/Library-Sites-paulachoice/default/dwc25bdc5b/images/homepage-new/us_190717_desktop_panel-b_2010-review.jpg" style="width:100%">
+            <img src="https://scontent.fhph1-1.fna.fbcdn.net/v/t39.30808-6/271693260_1105250966975589_5847007318817523028_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=dbeb18&_nc_ohc=LydgiYx8wToAX85gQGO&_nc_ht=scontent.fhph1-1.fna&oh=00_AT8cEEVvJLXcYC_DgA3tcvK24sZS3ibN4Lybn5q8qNEEZA&oe=61E186DC">
             <div class="text"></div>
         </div>
 
         <div class="myslide fade">
-            <div class="numbertext">3 / 3</div>
-            <img src="https://www.shiseido.com.vn/on/demandware.static/-/Sites-shiseido_global_vn-Library/default/dw62c81aad/images/home/slide/HOME_E-series_Product_desktop_A1.jpg" style="width:100%">
+            <img src="https://scontent.fhph2-1.fna.fbcdn.net/v/t39.30808-6/271636630_1105244553642897_8662135113000007254_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=dbeb18&_nc_ohc=A2-NGFMAQ40AX8Gn3aa&_nc_ht=scontent.fhph2-1.fna&oh=00_AT_VD-4lP-gDfGQffOmTPN4di1NKNFarYaVKDc-LMm1TEw&oe=61E0EE31">
             <div class="text"></div>
         </div>
 
@@ -272,143 +666,143 @@
         }
     </script>
 
-    <main id='main-content' class='main-page'>
-        <section class="product">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-centered">
-                        <h2 class="title" align=center>NEW ARRIVALS</h2>
-                        <ul >
-                            <div id="carousel" class="owl-carousel owl-theme">
-                                @foreach($news as $product)
-                                    <div class ="product__item">
-                                        <div class="carousel-col">
-                                            <a href="#">
-                                                <div>
-                                                    <a href="{{route('detail',$product->id)}}"><img src="{{$product->product_img}}" alt="#" class=" img-responsive"></a>
-                                                </div>
-                                            </a>
-                                            <div class ="product_info">
-                                                <a href="{{route('detail',$product->id)}}">{{$product->product_name}}</a>
-                                                <p class="price">{{ number_format($product->product_price,0,',','.') }} VNĐ </p>
-                                                <div class="single-item-caption">
-                                                    <p>
-                                                        <a class="beta-btn primary" href="{{route('detail',$product->id)}}">Details</a> |
-                                                        <a href="{{route('get.add.product',$product->id)}}"><i class="glyphicon glyphicon-shopping-cart" align="right"></i></a>
-                                                    <div class="clearfix"></div>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                            @endforeach
-                            <!-- <div class="left carousel-control">
-                                        <a href="#carousel" role="button" data-slide="prev">
-                                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                    </div>
-                                    <div class="right carousel-control">
-                                        <a href="#carousel" role="button" data-slide="next">
-                                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
-                                    </div>    -->
-                            </div>
-                        </ul>
-                        <div class="col-md-12 col-centered">
-                            <h2 class = "title" align=center>SALE OFF</h2>
-                            <ul>
-                                <div id="carousel" class="owl-carousel owl-theme">
-                                    @foreach($sales as $product)
-                                        <div class ="product__item">
-                                            <div class="carousel-col">
-                                                <a href="#">
-                                                    <!-- <div class="wrapper"> -->
-                                                    <div class="img">
-                                                        <a href="{{route('detail',$product->id)}}"><img src="{{$product->product_img}}" alt="#" class=" img-responsive"></a>
-                                                        <div class="ribbon-wrapper">
-                                                            <div class="ribbon">20% OFF</div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- </div> -->
-                                                </a>
-                                                <div class ="product_info">
-                                                    <a href="{{route('detail',$product->id)}}">{{$product->product_name}}</a>
-                                                    <p class="price"><del>{{number_format($product->product_price,0,',','.')}} VNĐ</del> -> {{number_format($product->product_price,0,',','.')}} VNĐ</p>
-                                                    <div class="single-item-caption">
-                                                        <p>
-                                                            <a class="beta-btn primary" href="{{route('detail',$product->id)}}">Details</a> |
-                                                            <a href="{{route('get.add.product',$product->id)}}"><i class="glyphicon glyphicon-shopping-cart" align="right"></i></a>
-                                                        <div class="clearfix"></div>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endforeach
+    {{--    <main id='main-content' class='main-page'>--}}
+    {{--        <section class="product">--}}
+    {{--            <div class="container">--}}
+    {{--                <div class="row">--}}
+    {{--                    <div class="col-md-12 col-centered">--}}
+    {{--                        <h2 class="title" align=center>NEW ARRIVALS</h2>--}}
+    {{--                        <ul >--}}
+    {{--                            <div id="carousel" class="owl-carousel owl-theme">--}}
+    {{--                                @foreach($news as $product)--}}
+    {{--                                    <div class ="product__item">--}}
+    {{--                                        <div class="carousel-col">--}}
+    {{--                                            <a href="#">--}}
+    {{--                                                <div>--}}
+    {{--                                                    <a href="{{route('detail',$product->id)}}"><img src="{{$product->product_img}}" alt="#" class=" img-responsive"></a>--}}
+    {{--                                                </div>--}}
+    {{--                                            </a>--}}
+    {{--                                            <div class ="product_info">--}}
+    {{--                                                <a href="{{route('detail',$product->id)}}">{{$product->product_name}}</a>--}}
+    {{--                                                <p class="price">{{ number_format($product->product_price,0,',','.') }} VNĐ </p>--}}
+    {{--                                                <div class="single-item-caption">--}}
+    {{--                                                    <p>--}}
+    {{--                                                        <a class="beta-btn primary" href="{{route('detail',$product->id)}}">Details</a> |--}}
+    {{--                                                        <a href="{{route('get.add.product',$product->id)}}"><i class="glyphicon glyphicon-shopping-cart" align="right"></i></a>--}}
+    {{--                                                    <div class="clearfix"></div>--}}
+    {{--                                                    </p>--}}
+    {{--                                                </div>--}}
+    {{--                                            </div>--}}
+    {{--                                        </div>--}}
+    {{--                                    </div>--}}
+    {{--                            @endforeach--}}
+    {{--                            <!-- <div class="left carousel-control">--}}
+    {{--                                        <a href="#carousel" role="button" data-slide="prev">--}}
+    {{--                                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>--}}
+    {{--                                            <span class="sr-only">Previous</span>--}}
+    {{--                                        </a>--}}
+    {{--                                    </div>--}}
+    {{--                                    <div class="right carousel-control">--}}
+    {{--                                        <a href="#carousel" role="button" data-slide="next">--}}
+    {{--                                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>--}}
+    {{--                                            <span class="sr-only">Next</span>--}}
+    {{--                                        </a>--}}
+    {{--                                    </div>    -->--}}
+    {{--                            </div>--}}
+    {{--                        </ul>--}}
+    {{--                        <div class="col-md-12 col-centered">--}}
+    {{--                            <h2 class = "title" align=center>SALE OFF</h2>--}}
+    {{--                            <ul>--}}
+    {{--                                <div id="carousel" class="owl-carousel owl-theme">--}}
+    {{--                                    @foreach($sales as $product)--}}
+    {{--                                        <div class ="product__item">--}}
+    {{--                                            <div class="carousel-col">--}}
+    {{--                                                <a href="#">--}}
+    {{--                                                    <!-- <div class="wrapper"> -->--}}
+    {{--                                                    <div class="img">--}}
+    {{--                                                        <a href="{{route('detail',$product->id)}}"><img src="{{$product->product_img}}" alt="#" class=" img-responsive"></a>--}}
+    {{--                                                        <div class="ribbon-wrapper">--}}
+    {{--                                                            <div class="ribbon">20% OFF</div>--}}
+    {{--                                                        </div>--}}
+    {{--                                                    </div>--}}
+    {{--                                                    <!-- </div> -->--}}
+    {{--                                                </a>--}}
+    {{--                                                <div class ="product_info">--}}
+    {{--                                                    <a href="{{route('detail',$product->id)}}">{{$product->product_name}}</a>--}}
+    {{--                                                    <p class="price"><del>{{number_format($product->product_price,0,',','.')}} VNĐ</del> -> {{number_format($product->product_price,0,',','.')}} VNĐ</p>--}}
+    {{--                                                    <div class="single-item-caption">--}}
+    {{--                                                        <p>--}}
+    {{--                                                            <a class="beta-btn primary" href="{{route('detail',$product->id)}}">Details</a> |--}}
+    {{--                                                            <a href="{{route('get.add.product',$product->id)}}"><i class="glyphicon glyphicon-shopping-cart" align="right"></i></a>--}}
+    {{--                                                        <div class="clearfix"></div>--}}
+    {{--                                                        </p>--}}
+    {{--                                                    </div>--}}
+    {{--                                                </div>--}}
+    {{--                                            </div>--}}
+    {{--                                        </div>--}}
+    {{--                                    @endforeach--}}
 
-                                </div>
-                            </ul>
-                        </div>
-                        <div class="col-md-12 col-centered">
-                            <h2 class = "title" align=center>HOT SUMMER</h2>
-                            <ul >
-                                <div id="carousel" class="owl-carousel owl-theme">
-                                    @foreach($summers as $product)
-                                        <div class ="product__item">
-                                            <div class="carousel-col">
-                                                <a href="#">
-                                                    <div>
-                                                        <a href="{{route('detail',$product->id)}}"><img src="{{$product->product_img}}" alt="#" class=" img-responsive"></a>
-                                                    </div>
-                                                </a>
-                                                <div class ="product_info">
-                                                    <a href="{{route('detail',$product->id)}}">{{$product->product_name}}</a>
-                                                    <p class="price">{{number_format($product->product_price,0,',','.')}} VNĐ</p>
-                                                    <div class="single-item-caption">
-                                                        <p>
-                                                            <a class="beta-btn primary" href="{{route('detail',$product->id)}}">Details</a> |
-                                                            <a href="{{route('get.add.product',$product->id)}}"><i class="glyphicon glyphicon-shopping-cart" align="right"></i></a>
-                                                        <div class="clearfix"></div>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
+    {{--                                </div>--}}
+    {{--                            </ul>--}}
+    {{--                        </div>--}}
+    {{--                        <div class="col-md-12 col-centered">--}}
+    {{--                            <h2 class = "title" align=center>HOT SUMMER</h2>--}}
+    {{--                            <ul >--}}
+    {{--                                <div id="carousel" class="owl-carousel owl-theme">--}}
+    {{--                                    @foreach($summers as $product)--}}
+    {{--                                        <div class ="product__item">--}}
+    {{--                                            <div class="carousel-col">--}}
+    {{--                                                <a href="#">--}}
+    {{--                                                    <div>--}}
+    {{--                                                        <a href="{{route('detail',$product->id)}}"><img src="{{$product->product_img}}" alt="#" class=" img-responsive"></a>--}}
+    {{--                                                    </div>--}}
+    {{--                                                </a>--}}
+    {{--                                                <div class ="product_info">--}}
+    {{--                                                    <a href="{{route('detail',$product->id)}}">{{$product->product_name}}</a>--}}
+    {{--                                                    <p class="price">{{number_format($product->product_price,0,',','.')}} VNĐ</p>--}}
+    {{--                                                    <div class="single-item-caption">--}}
+    {{--                                                        <p>--}}
+    {{--                                                            <a class="beta-btn primary" href="{{route('detail',$product->id)}}">Details</a> |--}}
+    {{--                                                            <a href="{{route('get.add.product',$product->id)}}"><i class="glyphicon glyphicon-shopping-cart" align="right"></i></a>--}}
+    {{--                                                        <div class="clearfix"></div>--}}
+    {{--                                                        </p>--}}
+    {{--                                                    </div>--}}
+    {{--                                                </div>--}}
+    {{--                                            </div>--}}
 
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </ul>
-                        </div>
-                        <script>
-                            $(document).ready(function(){
-                                $('.owl-carousel').owlCarousel({
-                                    loop:true,
-                                    margin:10,
-                                    nav:false,
-                                    autoplay:2000,
-                                    item:4,
-                                    responsive:{
-                                        0:{
-                                            items:4
-                                        },
-                                        600:{
-                                            items:4
-                                        },
-                                        1000:{
-                                            items:4
-                                        }
-                                    }
-                                })
-                            });
-                        </script>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </section>
-    </main>
+    {{--                                        </div>--}}
+    {{--                                    @endforeach--}}
+    {{--                                </div>--}}
+    {{--                            </ul>--}}
+    {{--                        </div>--}}
+    {{--                        <script>--}}
+    {{--                            $(document).ready(function(){--}}
+    {{--                                $('.owl-carousel').owlCarousel({--}}
+    {{--                                    loop:true,--}}
+    {{--                                    margin:10,--}}
+    {{--                                    nav:false,--}}
+    {{--                                    autoplay:2000,--}}
+    {{--                                    item:4,--}}
+    {{--                                    responsive:{--}}
+    {{--                                        0:{--}}
+    {{--                                            items:4--}}
+    {{--                                        },--}}
+    {{--                                        600:{--}}
+    {{--                                            items:4--}}
+    {{--                                        },--}}
+    {{--                                        1000:{--}}
+    {{--                                            items:4--}}
+    {{--                                        }--}}
+    {{--                                    }--}}
+    {{--                                })--}}
+    {{--                            });--}}
+    {{--                        </script>--}}
+    {{--                    </div>--}}
+    {{--                </div>--}}
+    {{--            </div>--}}
+    {{--            </div>--}}
+    {{--        </section>--}}
+    {{--    </main>--}}
     <footer>
         <section class="footer">
 
@@ -477,43 +871,3 @@
 
 </html>
 <!-- <script src="{{ asset('js/test.js') }}"></script> -->
-=======
-@extends('fe.layout')
-@section('content')
-{{--    <!--sp chính-->--}}
-{{--    <div class="space-y-10 mt-5">--}}
-{{--        <section>--}}
-{{--            <h4 class="text-2xl font-bold">Sản phẩm mới nhất</h4>--}}
-
-
-{{--            <div class="grid grid-cols-1 md:grid-cols-4 md:space-x-6 space-y-6 md:space-y-0 mt-5">--}}
-{{--                @foreach($lastProducts as $item)--}}
-{{--                    @include('fe.products.card',['item'=>$item])--}}
-{{--                @endforeach--}}
-{{--            </div>--}}
-{{--        </section>--}}
-
-{{--        <section>--}}
-{{--            <h4 class="text-2xl font-bold">--}}
-{{--                Sản phẩm nhiều lượt xem nhất--}}
-{{--            </h4>--}}
-{{--            <div class="grid grid-cols-1 md:grid-cols-4 md:space-x-6 space-y-6 md:space-y-0 mt-5">--}}
-{{--                @foreach($lastProducts as $item)--}}
-{{--                    @include('fe.products.card',['item'=>$item])--}}
-{{--                @endforeach--}}
-{{--            </div>--}}
-{{--        </section>--}}
-
-{{--        <section>--}}
-{{--            <h4 class="text-2xl font-bold">--}}
-{{--                Sản phẩm nhiều người mua--}}
-{{--            </h4>--}}
-{{--            <div class="grid grid-cols-1 md:grid-cols-4 md:space-x-6 space-y-6 md:space-y-0 mt-5">--}}
-{{--                @foreach($lastProducts as $item)--}}
-{{--                    @include('fe.products.card',['item'=>$item])--}}
-{{--                @endforeach--}}
-{{--            </div>--}}
-{{--        </section>--}}
-{{--    </div>--}}
-@endsection
->>>>>>> 3450061c7a508f4af5eb2b46c44be136e85b83a5

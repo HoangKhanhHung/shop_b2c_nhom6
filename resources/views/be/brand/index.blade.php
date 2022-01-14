@@ -12,11 +12,8 @@
                         <thead>
                         <tr>
                             <th style="width: 10px">#</th>
-                            <th>Image</th>
+                            <th>Logo</th>
                             <th>Name</th>
-                            <th>Price</th>
-                            <th>Category</th>
-                            <th>Short Description</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -25,8 +22,8 @@
                             <tr>
                                 <td>{{$item->id}}</td>
                                 <td>
-                                    @if($item->preview)
-                                        <img src="{{asset($item->preview->path)}}"
+                                    @if($item->logo_path)
+                                        <img src="{{asset($item->logo_path)}}" alt="{{$item->name}}"
                                              style="width: 100px; height: 100px">
                                     @else
                                         <img src="https://via.placeholder.com/150
@@ -35,21 +32,11 @@ C/O https://placeholder.com/"
                                     @endif
                                 </td>
                                 <td>{{$item->name}}</td>
-                                <td>{{$item->price}}</td>
-                                <td>
-                                    <span class="badge badge-primary">
-                                             @if($item->category)
-                                            {{$item->category->name}}
-                                        @else
-                                            No Category
-                                        @endif
-                                    </span>
-                                </td>
                                 <td>
                                     <a class="btn btn-warning"
-                                       href="{{route('admin.product.edit',['id'=>$item->id])}}">Edit</a>
+                                       href="{{route('admin.brand.edit',['id'=>$item->id])}}">Edit</a>
                                     <a class="btn btn-danger"
-                                       href="{{route('admin.product.delete',['id'=>$item->id])}}"
+                                       href="{{route('admin.brand.delete',['id'=>$item->id])}}"
                                        onclick="return confirm('Are you you want to delete this ?')" href="">Delete</a>
                                 </td>
                             </tr>
@@ -68,7 +55,7 @@ C/O https://placeholder.com/"
 @section('bread-crumb')
     <ol class="breadcrumb float-sm-right">
         <li class="breadcrumb-item"><a href="#">Admin</a></li>
-        <li class="breadcrumb-item"><a href="{{route('admin.product.list')}}">Category</a></li>
+        <<li class="breadcrumb-item"><a href="{{route('admin.brand.list')}}">Brand</a></li>
         <li class="breadcrumb-item active">List</li>
     </ol>
 @endsection

@@ -49,4 +49,46 @@ Route::prefix('/admin')->group(function (){
         Route::get('/delete/{id}', [\App\Http\Controllers\Admin\ProductController::class, 'delete'])
             ->name('admin.product.delete');
     });
+
+    Route::prefix('/variant')->group(function () {
+        Route::get('/list', [\App\Http\Controllers\Admin\VariantController::class, 'index'])->name('admin.variant.list');
+        Route::get('/add',
+            [\App\Http\Controllers\Admin\VariantController::class, 'add'])->name('admin.variant.add');
+        Route::post('/do-add',
+            [\App\Http\Controllers\Admin\VariantController::class, 'doAdd'])->name('admin.variant.doAdd');
+        Route::get('/edit/{id}', [\App\Http\Controllers\Admin\VariantController::class, 'edit'])
+            ->name('admin.variant.edit');
+        Route::post('/do-edit/{id}', [\App\Http\Controllers\Admin\VariantController::class, 'doEdit'])
+            ->name('admin.variant.doEdit');
+        Route::get('/delete/{id}', [\App\Http\Controllers\Admin\VariantController::class, 'delete'])
+            ->name('admin.variant.delete');
+    });
+
+    Route::prefix('/variant_value')->group(function () {
+        Route::get('/list', [\App\Http\Controllers\Admin\VariantValueController::class, 'index'])->name('admin.variant_value.list');
+        Route::get('/add',
+            [\App\Http\Controllers\Admin\VariantValueController::class, 'add'])->name('admin.variant_value.add');
+        Route::post('/do-add',
+            [\App\Http\Controllers\Admin\VariantValueController::class, 'doAdd'])->name('admin.variant_value.doAdd');
+        Route::get('/edit/{id}', [\App\Http\Controllers\Admin\VariantValueController::class, 'edit'])
+            ->name('admin.variant_value.edit');
+        Route::post('/do-edit/{id}', [\App\Http\Controllers\Admin\VariantValueController::class, 'doEdit'])
+            ->name('admin.variant_value.doEdit');
+        Route::get('/delete/{id}', [\App\Http\Controllers\Admin\VariantValueController::class, 'delete'])
+            ->name('admin.variant_value.delete');
+    });
+
+    Route::prefix('/brand')->group(function () {
+        Route::get('/list', [\App\Http\Controllers\Admin\BrandController::class, 'index'])->name('admin.brand.list');
+        Route::get('/add',
+            [\App\Http\Controllers\Admin\BrandController::class, 'add'])->name('admin.brand.add');
+        Route::post('/do-add',
+            [\App\Http\Controllers\Admin\BrandController::class, 'doAdd'])->name('admin.brand.doAdd');
+        Route::get('/edit/{id}', [\App\Http\Controllers\Admin\BrandController::class, 'edit'])
+            ->name('admin.brand.edit');
+        Route::post('/do-edit/{id}', [\App\Http\Controllers\Admin\BrandController::class, 'doEdit'])
+            ->name('admin.brand.doEdit');
+        Route::get('/delete/{id}', [\App\Http\Controllers\Admin\BrandController::class, 'delete'])
+            ->name('admin.brand.delete');
+    });
 });
