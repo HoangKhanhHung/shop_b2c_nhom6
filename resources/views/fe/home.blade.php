@@ -29,7 +29,7 @@
 
         ul{
             /*margin-bottom: 0px;*/
-            margin-top: -13px;
+            margin-top: 0px;
             padding: 0;
             display: flex;
             margin-left: 80px;
@@ -620,17 +620,17 @@
     <div class="slideshow-container">
 
         <div class="myslide fade">
-            <img src="https://scontent.fhph1-3.fna.fbcdn.net/v/t39.30808-6/271544865_1105234056977280_2286162424717979173_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=dbeb18&_nc_ohc=Y8dF7HcbSuAAX-11ZkV&_nc_ht=scontent.fhph1-3.fna&oh=00_AT8e1penvmg96MLpJBdYmk4DSZCAV_qkNDShYSkeDVCJTg&oe=61E0E718">
+            <img src="https://www.dior.com/couture/var/dior/storage/images/29925457/2-int-EN/cdc-femme-collection-croisiere-202226_1440_1200.jpg" width="1440" height="617">
             <div class="text"></div>
         </div>
 
         <div class="myslide fade">
-            <img src="https://scontent.fhph1-1.fna.fbcdn.net/v/t39.30808-6/271693260_1105250966975589_5847007318817523028_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=dbeb18&_nc_ohc=LydgiYx8wToAX85gQGO&_nc_ht=scontent.fhph1-1.fna&oh=00_AT8cEEVvJLXcYC_DgA3tcvK24sZS3ibN4Lybn5q8qNEEZA&oe=61E186DC">
+            <img src="https://www.dior.com/couture/var/dior/storage/images/24396597/5-int-EN/pcd-parfum-en-exclusivite-la-collection-new-look6_1440_1200.jpg" width="1440" height="617">
             <div class="text"></div>
         </div>
 
         <div class="myslide fade">
-            <img src="https://scontent.fhph2-1.fna.fbcdn.net/v/t39.30808-6/271636630_1105244553642897_8662135113000007254_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=dbeb18&_nc_ohc=A2-NGFMAQ40AX8Gn3aa&_nc_ht=scontent.fhph2-1.fna&oh=00_AT_VD-4lP-gDfGQffOmTPN4di1NKNFarYaVKDc-LMm1TEw&oe=61E0EE31">
+            <img style="-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://www.dior.com/couture/var/dior/storage/images/27978587/4-int-EN/pcd-miss-dior-eau-de-parfum7_1440_1200.jpg" width="1440" height="617">
             <div class="text"></div>
         </div>
 
