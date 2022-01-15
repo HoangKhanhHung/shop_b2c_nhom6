@@ -807,13 +807,22 @@
         <section class="footer">
 
             <div class="footer">
-                <div class="footer-left col-md-4">
+                <div class="footer-left col-md-4" >
                     <p class="about">
                         <span><strong>About Us</strong></span><br><br>
                         Website bán hàng với các chức năng như xem danh sách sản phẩm, Danh sách sản phẩm theo từng loại,chức năng mua hàng và xử lý đơn hàng, chức năng đăng nhập và đăng xuất, Xử lý tìm kiếm theo tên và theo giá sản phẩm.
                     </p>
                     <br>
+                    <div class="input-group">
+                        <span><strong>Sign up to receive information here</strong></span><br>
+                        <input type="email" value="" placeholder="  Nhập email của bạn " name="contact[email]" id="Email" class="input-group-field" aria-label="email@example.com">
+                        <input type="hidden" name="contact[tags]" value="newsletter">
+                        <button type="submit" name="subscribe" id="subscribe" value="GỬI"><strong>Đăng ký</strong></button>
+
+                    </div>
+                    <br>
                     <div class="icons">
+                        <span><strong>Contact Us</strong></span><br>
                         <a href="#" class="fa fa-facebook"></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
                         <a href="#"><i class="fa fa-linkedin"></i></a>
@@ -823,15 +832,15 @@
                 </div>
                 <div class="footer-center col-md-4">
                     <div>
-                        <i class="fa fa-map-marker"></i>
+                        <i class="fa fa-map-marker"><strong> Address</strong></i>
                         <p><span>353 Đường Cầu Giấy, Dịch Vọng, Cầu Giấy,  Hà Nội</span></p>
                     </div>
                     <div>
-                        <i class="fa fa-phone"></i>
+                        <i class="fa fa-phone"><strong> Phone</strong></i>
                         <p>(+84) 982160593</p>
                     </div>
                     <div>
-                        <i class="fa fa-envelope"></i>
+                        <i class="fa fa-envelope"><strong> Email</strong></i>
                         <p><a href="#">shop10K@gmail.com</a></p>
                     </div>
                 </div>
@@ -871,4 +880,4 @@
 
 </html>
 <!-- <script src="{{ asset('js/test.js') }}"></script> -->
-/
+
