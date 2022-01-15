@@ -20,6 +20,8 @@ Route::prefix('/admin')->group(function (){
             [\App\Http\Controllers\Admin\UserController::class, 'doEdit'])->name('admin.user.doEdit');
         Route::get('/delete/{id}',
             [\App\Http\Controllers\Admin\UserController::class,'delete'])->name('admin.user.delete');
+        Route::get('/search', [\App\Http\Controllers\Admin\UserController::class, 'search'])
+            ->name('admin.user.search');
     });
 
     Route::prefix('/category')->group(function () {
@@ -48,6 +50,8 @@ Route::prefix('/admin')->group(function (){
             ->name('admin.product.doEdit');
         Route::get('/delete/{id}', [\App\Http\Controllers\Admin\ProductController::class, 'delete'])
             ->name('admin.product.delete');
+        Route::get('/search', [\App\Http\Controllers\Admin\ProductController::class, 'search'])
+            ->name('admin.product.search');
     });
 
     Route::prefix('/variant')->group(function () {

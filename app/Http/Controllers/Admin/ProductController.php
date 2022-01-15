@@ -40,6 +40,7 @@ class ProductController extends Controller implements ICrud
         $price = $request->price;
         $brandId = $request->brand_id ?? 0;
         $discountType = $request->discount_type;
+        $discountAmount = $request->discount_amount;
         $metaKeyword = $request->meta_keyword;
         $metaContent = $request->meta_content;
         $metaDescription = $request->meta_description;
@@ -51,7 +52,7 @@ class ProductController extends Controller implements ICrud
                 'content' => htmlentities($content),
                 'price' => $price,
                 'brand_id' => $brandId,
-                'discount_amount' => 0,
+                'discount_amount' => $discountAmount,
                 'discount_type' => $discountType,
                 'meta_keyword' => $metaKeyword,
                 'meta_description' => $metaDescription,
@@ -117,7 +118,19 @@ class ProductController extends Controller implements ICrud
         // TODO: Implement edit() method.
         $categories = \App\Models\Category::all();
         $product = Product::find($id);//lấy ra product có id là $id truyền vào
-        return view('be.product.edit', compact('product', 'categories'));
+        $brands = Brand::all();
+        $variants = Variant::all();
+
+        $variantValueIds = $product->variantValues->toArray();
+        $variantValueIdsArr = [];
+        foreach ($variantValueIds as $variantValueIdObj) {
+            // echo $variantValueIdObj['id'];
+            $variantValueIdsArr[] = $variantValueIdObj['id'];//id of variant_value
+        }
+
+        //dd($variantValueIdsArr);
+        return view('be.product.edit', compact('product',
+            'categories', 'brands', 'variants', 'variantValueIdsArr'));
     }
 
     public function doEdit($id, Request $request)
@@ -178,9 +191,40 @@ class ProductController extends Controller implements ICrud
                     $i++;
                 }
             }
+
+            if ($request->has('variants')) {
+                $variants = $request->variants;
+                //delete old data
+                ProductVariant::where('product_id', $id)
+                    ->delete();
+
+                foreach ($variants as $variant) {
+                    //2$|Color$|2$|Green
+                    $variantArr = explode('$|', $variant);//[2,"Color",2,"Green"]
+                    if (count($variantArr) == 4) {
+                        $variantId = $variantArr[0];
+                        $variantName = $variantArr[1];
+                        $variantValueId = $variantArr[2];
+                        $variantValueName = $variantArr[3];
+
+
+
+                        ProductVariant::create([
+                            'product_id' => $id,
+                            'variant_id' => $variantId,
+                            'variant_name' => $variantName,
+                            'variant_value_id' => $variantValueId,
+                            'variant_value_name' => $variantValueName
+                        ]);
+                    }
+
+                }
+            }
         } catch (\Exception $exception) {
             return redirect()->back()->with('error', "Update failed");
         }
+
+
         //chuyển hướng về trang  danh sách
         return redirect()->route('admin.product.list')->with('success', 'Update successfully');
     }
@@ -196,5 +240,16 @@ class ProductController extends Controller implements ICrud
             return redirect()->back()->with('error', "Delete failed");
         }
         return redirect()->back()->with('success', "Delete successfully");
+    }
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+        $list = Product::where('name', 'like', "%$query%")
+            ->orWhere('price', 'like', "%$query%")
+            ->orWhere('short_description', 'like', "%$query%")
+            ->orWhere('content', 'like', "%$query%")
+            ->orderBy('id', 'desc')
+            ->paginate(10);
+        return view('be.product.index', compact('list'));
     }
 }

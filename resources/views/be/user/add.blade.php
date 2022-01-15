@@ -50,3 +50,6 @@
         <li class="breadcrumb-item active">Add</li>
     </ol>
 @endsection
+@section('heading')
+    User
+@endsection

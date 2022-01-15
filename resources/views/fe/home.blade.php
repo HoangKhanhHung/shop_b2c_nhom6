@@ -29,7 +29,7 @@
 
         ul{
             /*margin-bottom: 0px;*/
-            margin-top: 0px;
+            margin-top: -13px;
             padding: 0;
             display: flex;
             margin-left: 80px;
@@ -620,17 +620,17 @@
     <div class="slideshow-container">
 
         <div class="myslide fade">
-            <img src="https://www.dior.com/couture/var/dior/storage/images/29925457/2-int-EN/cdc-femme-collection-croisiere-202226_1440_1200.jpg" width="1440" height="617">
+            <img src="https://lh3.googleusercontent.com/__NOPvs63uzxEsfzvZ3egc7o_9eBKkABZsdRz2oJGL4F8FaKmHUPMZifkXqxpk7dfcni_-MwoUtU6PV-pDAikwiRaTtZ2masU94qefsO74bSOAb0cqwtWhPgwExkB3wasVokVGxRvy7el2PWZQrkuQYi8Mg-sK369Ztago6X_KDDaLmOjB0J1t2mmIjHADFd42pcqVQbbYVhzm9yRkv2CzZXjwCX5aysnV6YCet6MM5h3LqeTIShP9SAVI0dA1qT3mId-l11E5w8-l8_WiAgHQlKno6h3WCgPXF8GWjta0W5hB7I4cbSLjMHrrlmBHVx0ntAwVGIP5y3skE3TTAkM-rg5RhOkgvoZ3SXEerciB4LEDlv6H2uSi-E9rf9sg524gfxRbEbywN8Hu1MKZImqxu9nHvhUc85a0B5SN89q7MsgNAOHxJzX8J5gil9VmJD8Rmrln1pOas0VGCu1ZZ-saWgfmBhdPmnVJful4YglHKVYiQnk82VqhPGKnYXnXLopHICzzmZB1qSpFSs_OWqmBL8oS0-LgvduSj_pWBe5W1O_EC85DvQ0y82_vEbcKV0HQsea5-H1s9_tE72hBdFEsD4MHzInCfRLl0IztJmsthlWcrRyCtNnyCpnJQDJ4Lb4sDEfNGY39tFg0X-d9DVOLSNh1oAyOV94otEQPvnGuNH0U4Cvf5RtgbVw8ysL1cO82Lkngl4JqT14hfMnsyHKh4=w1750-h440-no?authuser=1">
             <div class="text"></div>
         </div>
 
         <div class="myslide fade">
-            <img src="https://www.dior.com/couture/var/dior/storage/images/24396597/5-int-EN/pcd-parfum-en-exclusivite-la-collection-new-look6_1440_1200.jpg" width="1440" height="617">
+            <img src="https://lh3.googleusercontent.com/Ss6nlDDTmLIUY89e3P9ehXV1JkD-iNKS4tgCGusACY5CtFGac4TydIY0YGdLtymtYdMSoFKmQNqWr8Axl_FuASKeedqXniWAbtVdVkN6ya9Rmpq5affPrVU9rXvY7zEtAVR6O-cigZkRaqo3w6Jty80zxhPA_QNTNFRYfg5QQMcF0OiSVqVgcXp44mOqYodpVSthl556pGYKAlRlmhsAPNbNeNL9KTAu3MBhTkd4xdyPzoBEkNBLOJ0Zj9bBOpYsxUf6atVHRiO3kuE3C-v_CObLRM1kzm32bYulgVtyGt3w5KwBZ7wax5mbqdrKgl_CzK0UpoUuB8njFbPSBf3PbcEjl9R3BnDFD1TRxsmBQIwYEfEXR96WVxPrKrkcGJGf4fUm4Pxescgm-Nhh6W4-ifBea2Wep72gjQoNOpFyBdVWK42UC4Yaq3fwSOJaNPifsE7eX4d4gIeq3BAU31Lfaeu3D1eAQ1GT5aee6m2e7FwYSHnkqJPmy6oo__NE7NG9R_PRYDLl2urKBVqqWWRugsnIHI8GlVRI3kaDEQZYLow_6SdcChvls401lLYycOVDRo8wOkiNllokVMg3-w_CdR_JIBQd3xg4kwbr84lucogNUjR_nhUBp74in2VCYUGL6VUCQjewaYYSEH1v89woGz0IF0nhpBc25T6bow__say4SVabVnph8fgxD7vWoQCryQW6-vxX2ysoIg5zwG2-HRI=w1470-h370-no?authuser=1">
             <div class="text"></div>
         </div>
 
         <div class="myslide fade">
-            <img style="-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://www.dior.com/couture/var/dior/storage/images/27978587/4-int-EN/pcd-miss-dior-eau-de-parfum7_1440_1200.jpg" width="1440" height="617">
+            <img src="https://lh3.googleusercontent.com/ftxdgkJdPp3tYY6MfhypcPJXCwJFH1_W2eUoSXh06cN3Uk9KJSk0tT04HOPs37Yda2g89tSVBZRkIXBKAy6UL2LRAYlgiIHkMh5Nxv4DbyC5CJWZ0E_9WIvi1yszQYY73d31y6-TDbNR_uREnHaQ6d50cNAsE7PlWJBT5j60AvT2teb1hYoha5txHEPLmmDXLVXJ6uncXNzjzzJN_Ae8-8EgVQw0kYe-1vi5llPnBEOs5JvSWVrMkchO7rQ_YtN2uPy9e-u8VjwlYSRTlBoloWhRtz3WUe3NgenqLMw_decmpSYHVMmeAnmqb9Vl2iTHSZvupb-A4V3EsWdGUlYrK2AHg1iRPzBfEntEGZZ09kLp1DXwYucNeAE8H8MHgeytYmFR2FxAOQUhUN7Dswkq1Vh4LEaL4nOit9aN-n0FYEfW69iHSUmVOzyiy0gyona-_4IsMIj8fR0mxBI_f7-g77emnUmA2zLAx04k2u7uYTwagB7f-vFKI0FxnpKSAXJwoniMzNXh5E1VbiJmcMS-tqm_Wy0zD38fJjbsZvOffHhktanSTfPGjZac9vBGbHnefh9oTv-i0JIj83tZ6cvXbUfoCS6b-HHGTN6s0KN0DSNnJTkMHjlsgIoACWwgixPeTBpH8vMsXP229aMnEjV2umK3pGkEsjPf5avU9u-Aaw8jCXR8RSho8sbOuzUt_8Idq2jXp0Wx-9bu6f-DyDoI_Vo=w1470-h370-no?authuser=1">
             <div class="text"></div>
         </div>
 
@@ -814,7 +814,7 @@
                     </p>
                     <br>
                     <div class="icons">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="fa fa-facebook"></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
                         <a href="#"><i class="fa fa-linkedin"></i></a>
                         <a href="#"><i class="fa fa-google-plus"></i></a>
