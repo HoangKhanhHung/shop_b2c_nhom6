@@ -620,17 +620,17 @@
     <div class="slideshow-container">
 
         <div class="myslide fade">
-            <img src="https://lh3.googleusercontent.com/__NOPvs63uzxEsfzvZ3egc7o_9eBKkABZsdRz2oJGL4F8FaKmHUPMZifkXqxpk7dfcni_-MwoUtU6PV-pDAikwiRaTtZ2masU94qefsO74bSOAb0cqwtWhPgwExkB3wasVokVGxRvy7el2PWZQrkuQYi8Mg-sK369Ztago6X_KDDaLmOjB0J1t2mmIjHADFd42pcqVQbbYVhzm9yRkv2CzZXjwCX5aysnV6YCet6MM5h3LqeTIShP9SAVI0dA1qT3mId-l11E5w8-l8_WiAgHQlKno6h3WCgPXF8GWjta0W5hB7I4cbSLjMHrrlmBHVx0ntAwVGIP5y3skE3TTAkM-rg5RhOkgvoZ3SXEerciB4LEDlv6H2uSi-E9rf9sg524gfxRbEbywN8Hu1MKZImqxu9nHvhUc85a0B5SN89q7MsgNAOHxJzX8J5gil9VmJD8Rmrln1pOas0VGCu1ZZ-saWgfmBhdPmnVJful4YglHKVYiQnk82VqhPGKnYXnXLopHICzzmZB1qSpFSs_OWqmBL8oS0-LgvduSj_pWBe5W1O_EC85DvQ0y82_vEbcKV0HQsea5-H1s9_tE72hBdFEsD4MHzInCfRLl0IztJmsthlWcrRyCtNnyCpnJQDJ4Lb4sDEfNGY39tFg0X-d9DVOLSNh1oAyOV94otEQPvnGuNH0U4Cvf5RtgbVw8ysL1cO82Lkngl4JqT14hfMnsyHKh4=w1750-h440-no?authuser=1">
+            <img src="https://github.com/HoangKhanhHung/shop_b2c_nhom6/blob/master/resources/views/images/a.jpg?raw=true">
             <div class="text"></div>
         </div>
 
         <div class="myslide fade">
-            <img src="https://lh3.googleusercontent.com/Ss6nlDDTmLIUY89e3P9ehXV1JkD-iNKS4tgCGusACY5CtFGac4TydIY0YGdLtymtYdMSoFKmQNqWr8Axl_FuASKeedqXniWAbtVdVkN6ya9Rmpq5affPrVU9rXvY7zEtAVR6O-cigZkRaqo3w6Jty80zxhPA_QNTNFRYfg5QQMcF0OiSVqVgcXp44mOqYodpVSthl556pGYKAlRlmhsAPNbNeNL9KTAu3MBhTkd4xdyPzoBEkNBLOJ0Zj9bBOpYsxUf6atVHRiO3kuE3C-v_CObLRM1kzm32bYulgVtyGt3w5KwBZ7wax5mbqdrKgl_CzK0UpoUuB8njFbPSBf3PbcEjl9R3BnDFD1TRxsmBQIwYEfEXR96WVxPrKrkcGJGf4fUm4Pxescgm-Nhh6W4-ifBea2Wep72gjQoNOpFyBdVWK42UC4Yaq3fwSOJaNPifsE7eX4d4gIeq3BAU31Lfaeu3D1eAQ1GT5aee6m2e7FwYSHnkqJPmy6oo__NE7NG9R_PRYDLl2urKBVqqWWRugsnIHI8GlVRI3kaDEQZYLow_6SdcChvls401lLYycOVDRo8wOkiNllokVMg3-w_CdR_JIBQd3xg4kwbr84lucogNUjR_nhUBp74in2VCYUGL6VUCQjewaYYSEH1v89woGz0IF0nhpBc25T6bow__say4SVabVnph8fgxD7vWoQCryQW6-vxX2ysoIg5zwG2-HRI=w1470-h370-no?authuser=1">
+            <img src="https://github.com/HoangKhanhHung/shop_b2c_nhom6/blob/master/resources/views/images/anh1.jpg?raw=true" >
             <div class="text"></div>
         </div>
 
         <div class="myslide fade">
-            <img src="https://lh3.googleusercontent.com/ftxdgkJdPp3tYY6MfhypcPJXCwJFH1_W2eUoSXh06cN3Uk9KJSk0tT04HOPs37Yda2g89tSVBZRkIXBKAy6UL2LRAYlgiIHkMh5Nxv4DbyC5CJWZ0E_9WIvi1yszQYY73d31y6-TDbNR_uREnHaQ6d50cNAsE7PlWJBT5j60AvT2teb1hYoha5txHEPLmmDXLVXJ6uncXNzjzzJN_Ae8-8EgVQw0kYe-1vi5llPnBEOs5JvSWVrMkchO7rQ_YtN2uPy9e-u8VjwlYSRTlBoloWhRtz3WUe3NgenqLMw_decmpSYHVMmeAnmqb9Vl2iTHSZvupb-A4V3EsWdGUlYrK2AHg1iRPzBfEntEGZZ09kLp1DXwYucNeAE8H8MHgeytYmFR2FxAOQUhUN7Dswkq1Vh4LEaL4nOit9aN-n0FYEfW69iHSUmVOzyiy0gyona-_4IsMIj8fR0mxBI_f7-g77emnUmA2zLAx04k2u7uYTwagB7f-vFKI0FxnpKSAXJwoniMzNXh5E1VbiJmcMS-tqm_Wy0zD38fJjbsZvOffHhktanSTfPGjZac9vBGbHnefh9oTv-i0JIj83tZ6cvXbUfoCS6b-HHGTN6s0KN0DSNnJTkMHjlsgIoACWwgixPeTBpH8vMsXP229aMnEjV2umK3pGkEsjPf5avU9u-Aaw8jCXR8RSho8sbOuzUt_8Idq2jXp0Wx-9bu6f-DyDoI_Vo=w1470-h370-no?authuser=1">
+            <img src="https://github.com/HoangKhanhHung/shop_b2c_nhom6/blob/master/resources/views/images/b.jpg?raw=true">
             <div class="text"></div>
         </div>
 
@@ -824,7 +824,7 @@
                 <div class="footer-center col-md-4">
                     <div>
                         <i class="fa fa-map-marker"></i>
-                        <p><span>334 Nguyễn Trãi, Thanh Xuân, Hà Nội</span></p>
+                        <p><span>353 Đường Cầu Giấy, Dịch Vọng, Cầu Giấy,  Hà Nội</span></p>
                     </div>
                     <div>
                         <i class="fa fa-phone"></i>
@@ -832,11 +832,11 @@
                     </div>
                     <div>
                         <i class="fa fa-envelope"></i>
-                        <p><a href="#">nmn@gmail.com</a></p>
+                        <p><a href="#">shop10K@gmail.com</a></p>
                     </div>
                 </div>
                 <div class="footer-right col-md-4">
-                    <h2>NMN<span></h2>
+                   <div class="align-content-center"> <h2>Shop 10K<span></h2></div>
                     <p class="menu">
                         <a href="#"> Home</a> |
                         <a href="#"> About</a> |
@@ -845,9 +845,9 @@
                         <a href="#"> News</a> |
                         <a href="#"> Contact</a>
                     </p>
-                    <p class="name"> Company Name &copy; 2019</p>
+                    <p class="name"> Company Name &copy; 2022</p>
                     <div class="googleMap">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.9176126980487!2d105.80578381464521!3d20.99593939427444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135acbf0df2c0e5%3A0xd740a66998e1a0ed!2sVNU+University+of+Science!5e0!3m2!1sen!2s!4v1566118193929!5m2!1sen!2s" width="400" height="100" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.915579923574!2d105.79064029999999!3d21.0360636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab49d5a79b99%3A0xf6409b8136b4dcc8!2sShop%20Th%E1%BB%9Di%20Trang%20Phan%20Nguy%C3%AAn!5e0!3m2!1svi!2s!4v1642267392526!5m2!1svi!2s"  width="400" height="100" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -871,3 +871,4 @@
 
 </html>
 <!-- <script src="{{ asset('js/test.js') }}"></script> -->
+/
