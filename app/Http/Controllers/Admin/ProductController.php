@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Brand;
 use App\Models\Image;
 use App\Models\Product;
+use App\Models\ProductVariant;
+use App\Models\Variant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use PHPUnit\Exception;
@@ -23,7 +26,9 @@ class ProductController extends Controller implements ICrud
     {
         // TODO: Implement add() method.
         $categories = \App\Models\Category::all();
-        return view('be.product.add', compact('categories'));
+        $brands = Brand::all();
+        $variants = Variant::all();
+        return view('be.product.add', compact('categories','brands','variants'));
     }
 
     public function doAdd(Request $request)
@@ -73,6 +78,28 @@ class ProductController extends Controller implements ICrud
                         dd($exception->getMessage());
                     }
                     $i++;
+                }
+            }
+            //check if product has variant
+            if ($request->has('variants')) {
+                $variants = $request->variants;
+                foreach ($variants as $variant) {
+                    //2$|Color$|2$|Green
+                    $variantArr = explode('$|', $variant);//[2,"Color",2,"Green"]
+                    if (count($variantArr) == 4) {
+                        $variantId = $variantArr[0];
+                        $variantName = $variantArr[1];
+                        $variantValueId = $variantArr[2];
+                        $variantValueName = $variantArr[3];
+                        ProductVariant::create([
+                            'product_id' => $product->id,
+                            'variant_id' => $variantId,
+                            'variant_name' => $variantName,
+                            'variant_value_id' => $variantValueId,
+                            'variant_value_name' => $variantValueName
+                        ]);
+                    }
+
                 }
             }
         } catch (\Exception $exception) {
