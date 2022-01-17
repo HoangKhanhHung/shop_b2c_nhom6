@@ -72,7 +72,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: #89ffe3;
+            background: #fff3aa;
             transition: transform .5s;
             transform-origin: right;
             transform: scaleX(0);
