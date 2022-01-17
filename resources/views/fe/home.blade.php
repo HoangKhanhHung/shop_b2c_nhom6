@@ -620,17 +620,17 @@
     <div class="slideshow-container">
 
         <div class="myslide fade">
-            <img src="https://github.com/HoangKhanhHung/shop_b2c_nhom6/blob/master/resources/views/images/a.jpg?raw=true">
+            <img src="{{asset('fe/images/a.jpg')}}">
             <div class="text"></div>
         </div>
 
         <div class="myslide fade">
-            <img src="https://github.com/HoangKhanhHung/shop_b2c_nhom6/blob/master/resources/views/images/anh1.jpg?raw=true" >
+            <img src="{{asset('fe/images/tuyj.jpg')}}">
             <div class="text"></div>
         </div>
 
         <div class="myslide fade">
-            <img src="https://github.com/HoangKhanhHung/shop_b2c_nhom6/blob/master/resources/views/images/b.jpg?raw=true">
+            <img src="{{asset('fe/images/b.jpg')}}">
             <div class="text"></div>
         </div>
 
