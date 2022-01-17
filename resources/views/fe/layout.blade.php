@@ -14,32 +14,35 @@
 
     <script src="{{asset('fe/jquery/jquery.min.js')}}"></script>
     <script src="{{asset('fe/owl-carousel/owl.carousel.min.js')}}"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset('css/master.css')}}"/>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
 </head>
 <body>
 <div class="container mx-auto space-y-10">
-    <nav class="flex justify-between items-center shadow p-2" style="background: #cecece">
+    <nav class="flex justify-between items-center shadow p-2" style="background: #dbdbdb">
         <div class="text-x space-x-2">
             <i class="bi bi-telephone-fill"></i>
             <a>Liên Hệ: 09 8888 6666</a>
             <i class="bi bi-envelope-fill"></i>
             <a>Email: hotro@gmail.com</a>
         </div>
-        <div class="flex items-center gap-5 text-xl ">
+        <div class="flex items-center gap-7 text-xl" style="margin-right: 30px">
                 <a href=""><i class="bi bi-person"></i></a>
                 <a href=""><i class="bi bi-cart"></i></a>
         </div>
     </nav>
 
-    <img src="{{asset('fe/img/logo.png')}}" width="160" class="mx-auto"/>
+    <img src="{{asset('fe/img/logo.png')}}" width="250" class="mx-auto" style="margin-top: 0px"/>
 
     <nav class="flex justify-between items-center shadow p-3" style="background: #f6f6f6">
-        <div class="text-xl uppercase font-semibold space-x-3">
-            <a href=""><i class="bi bi-house"></i></a>
-            <a href="">Nữ</a>
-            <a href="">Nam</a>
-            <a href="">Trẻ em</a>
-            <a href="">Thể thao</a>
-            <a href="">Classic</a>
+        <div class="uppercase font-semibold">
+            <ul>
+                <li><a href="#" data-text="Home">Trang chủ</a></li>
+                <li><a href="#" data-text="About">Sản phẩm</a></li>
+                <li><a href="#" data-text="Services">Đồng phục</a></li>
+                <li><a href="#" data-text="Team">Thương hiệu</a></li>
+                <li><a href="#" data-text="Contact">Bộ sưu tập</a></li>
+            </ul>
         </div>
 
         <div class="flex items-center gap-2">
@@ -50,8 +53,26 @@
     </nav>
 
     <!--BANNER-->
-    <div>
-        <img src="{{asset('fe/img/banner.jpg')}}" class="mx-auto object-cover h-96 w-full"/>
+    <div class="sliderAx h-auto">
+        <div id="slider-1" class="container mx-auto">
+            <div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill">
+                <img src="{{asset("fe/img/a.jpg")}}">
+            </div> <!-- container -->
+            <br>
+        </div>
+
+        <div id="slider-2" class="container mx-auto">
+            <div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill">
+                <img src="{{asset("fe/img/tuyj.jpg")}}">
+            </div> <!-- container -->
+            <br>
+        </div> <!-- container -->
+            <br>
+        </div>
+    </div>
+    <div  class="flex justify-between w-12 mx-auto pb-2">
+        <button id="sButton1" onclick="sliderButton1()" class="bg-purple-400 rounded-full w-4 pb-2 " ></button>
+        <button id="sButton2" onclick="sliderButton2() " class="bg-purple-400 rounded-full w-4 p-2"></button>
     </div>
     <!--END BANNER-->
 
@@ -179,6 +200,83 @@
             }
         });
     });
+</script>
+<script>
+    var cont=0;
+    function loopSlider(){
+        var xx= setInterval(function(){
+            switch(cont)
+            {
+                case 0:{
+                    $("#slider-1").fadeOut(400);
+                    $("#slider-2").delay(400).fadeIn(400);
+                    $("#sButton1").removeClass("bg-purple-800");
+                    $("#sButton2").addClass("bg-purple-800");
+                    cont=1;
+
+                    break;
+                }
+                case 1:
+                {
+
+                    $("#slider-2").fadeOut(400);
+                    $("#slider-1").delay(400).fadeIn(400);
+                    $("#sButton2").removeClass("bg-purple-800");
+                    $("#sButton1").addClass("bg-purple-800");
+
+                    cont=0;
+
+                    break;
+                }
+
+
+            }},8000);
+
+    }
+
+    function reinitLoop(time){
+        clearInterval(xx);
+        setTimeout(loopSlider(),time);
+    }
+
+
+
+    function sliderButton1(){
+
+        $("#slider-2").fadeOut(400);
+        $("#slider-1").delay(400).fadeIn(400);
+        $("#sButton2").removeClass("bg-purple-800");
+        $("#sButton1").addClass("bg-purple-800");
+        reinitLoop(4000);
+        cont=0
+
+    }
+
+    function sliderButton2(){
+        $("#slider-1").fadeOut(400);
+        $("#slider-2").delay(400).fadeIn(400);
+        $("#sButton1").removeClass("bg-purple-800");
+        $("#sButton2").addClass("bg-purple-800");
+        reinitLoop(4000);
+        cont=1
+
+    }
+
+    $(window).ready(function(){
+        $("#slider-2").hide();
+        $("#sButton1").addClass("bg-purple-800");
+
+
+        loopSlider();
+
+
+
+
+
+
+    });
+
+
 </script>
 </body>
 </html>
