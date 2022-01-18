@@ -19,7 +19,7 @@
 </head>
 <body>
 <div class="container mx-auto space-y-10">
-    <nav class="flex justify-between items-center shadow p-2" style="background: #dbdbdb">
+    <nav class="flex justify-between items-center shadow p-2" style="background: #e8e8e8">
         <div class="text-x space-x-2">
             <i class="bi bi-telephone-fill"></i>
             <a>Liên Hệ: 09 8888 6666</a>
@@ -27,12 +27,12 @@
             <a>Email: hotro@gmail.com</a>
         </div>
         <div class="flex items-center gap-7 text-xl" style="margin-right: 30px">
-                <a href=""><i class="bi bi-person"></i></a>
-                <a href=""><i class="bi bi-cart"></i></a>
+            <a href=""><i class="bi bi-person"></i></a>
+            <a href=""><i class="bi bi-cart"></i></a>
         </div>
     </nav>
 
-    <img src="{{asset('fe/img/logo.png')}}" width="250" class="mx-auto" style="margin-top: 0px"/>
+    <img src="{{asset('fe/img/logoo.jpg')}}" width="500" class="mx-auto"/>
 
     <nav class="flex justify-between items-center shadow p-3" style="background: #f6f6f6">
         <div class="uppercase font-semibold">
@@ -53,154 +53,114 @@
     </nav>
 
     <!--BANNER-->
-    <div class="sliderAx h-auto">
-        <div id="slider-1" class="container mx-auto">
-            <div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill">
-                <img src="{{asset("fe/img/a.jpg")}}">
+    <div style="margin-top: -50px">
+        <div class="sliderAx h-auto">
+            <div id="slider-1" class="container mx-auto">
+                <div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill">
+                    <img src="{{asset("fe/img/a.jpg")}}">
+                </div> <!-- container -->
+            </div>
+
+            <div id="slider-2" class="container mx-auto">
+                <div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill">
+                    <img src="{{asset("fe/img/tuyj.jpg")}}">
+                </div> <!-- container -->
             </div> <!-- container -->
             <br>
         </div>
-
-        <div id="slider-2" class="container mx-auto">
-            <div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill">
-                <img src="{{asset("fe/img/tuyj.jpg")}}">
-            </div> <!-- container -->
-            <br>
-        </div> <!-- container -->
-            <br>
+        <div class="flex justify-between w-12 mx-auto pb-2" style="margin-top: -100px">
+            <button id="sButton1" onclick="sliderButton1()" class="bg-purple-400 rounded-full w-4 pb-2 " ></button>
+            <button id="sButton2" onclick="sliderButton2() " class="bg-purple-400 rounded-full w-4 p-2"></button>
         </div>
     </div>
-    <div  class="flex justify-between w-12 mx-auto pb-2">
-        <button id="sButton1" onclick="sliderButton1()" class="bg-purple-400 rounded-full w-4 pb-2 " ></button>
-        <button id="sButton2" onclick="sliderButton2() " class="bg-purple-400 rounded-full w-4 p-2"></button>
-    </div>
-    <!--END BANNER-->
+<!--END BANNER-->
 
-    <!--MAIN CONTENT-->
+<!--MAIN CONTENT-->
 
-    <div class="space-y-10">
-        <!--TOP PRODUCT-->
-        <div class="space-y-5">
-            <h3 class="font-bold text-xl">FEATURE PRODUCT <a style="color:#F2994A;" class="text-sm font-normal">See
-                    All</a>
-            </h3>
-            <div class="grid md:grid-cols-4 grid-cols-1 gap-10">
-                @for($i=0;$i<8;$i++)
-                    <div class="shadow">
-                        <div class="relative">
-                            <img src="{{asset('fe/img/shoes.jpeg')}}" class="object-cover h-64 w-full"/>
-                            <a class="absolute top-4 w-10 h-10 text-center rounded shadow right-4 p-2 bg-white">
-                                <i class="bi bi-heart"></i>
+<div class="space-y-10">
+    <!--TOP PRODUCT-->
+    <div class="space-y-5">
+        <h3 class="font-bold text-xl">FEATURE PRODUCT <a style="color:#F2994A;" class="text-sm font-normal">See
+                All</a>
+        </h3>
+        <div class="grid md:grid-cols-4 grid-cols-1 gap-10">
+            @for($i=0;$i<8;$i++)
+                <div class="shadow">
+                    <div class="relative">
+                        <img src="{{asset('fe/img/shoes.jpeg')}}" class="object-cover h-64 w-full"/>
+                        <a class="absolute top-4 w-10 h-10 text-center rounded shadow right-4 p-2 bg-white">
+                            <i class="bi bi-heart"></i>
+                        </a>
+                    </div>
+
+
+                    <div class="px-4 py-2">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-lg">Product Name</h3>
+                            <a class="shadow py-1 px-2 text-center w-10 rounded" style="background: #F2C94C;">
+                                <i class="bi bi-cart "></i>
                             </a>
                         </div>
-
-
-                        <div class="px-4 py-2">
-                            <div class="flex justify-between items-center">
-                                <h3 class="font-bold text-lg">Product Name</h3>
-                                <a class="shadow py-1 px-2 text-center w-10 rounded" style="background: #F2C94C;">
-                                    <i class="bi bi-cart "></i>
-                                </a>
-                            </div>
-                            <div>
-                                <span class="text-gray-400 line-through">300$</span>
-                                <span class="text-red-500">300$</span>
-                            </div>
-                            <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Accusamus,
-                                adipisci.</p>
+                        <div>
+                            <span class="text-gray-400 line-through">300$</span>
+                            <span class="text-red-500">300$</span>
                         </div>
+                        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Accusamus,
+                            adipisci.</p>
                     </div>
-                @endfor
-            </div>
-        </div>
-
-        <!--NEW ARIVAL PRODUCT-->
-        <div class="space-y-5">
-            <h3 class="font-bold text-xl">NEW ARIVAL PRODUCT <a style="color:#F2994A;" class="text-sm font-normal">See
-                    All</a>
-            </h3>
-            <div class="grid md:grid-cols-4 grid-cols-1 gap-10">
-                @for($i=0;$i<8;$i++)
-                    <div class="shadow">
-                        <div class="relative">
-                            <img src="{{asset('fe/img/shoes.jpeg')}}" class="object-cover h-64 w-full"/>
-                            <a class="absolute top-4 w-10 h-10 text-center rounded shadow right-4 p-2 bg-white">
-                                <i class="bi bi-heart"></i>
-                            </a>
-                        </div>
-
-
-                        <div class="px-4 py-2">
-                            <div class="flex justify-between items-center">
-                                <h3 class="font-bold text-lg">Product Name</h3>
-                                <a class="shadow py-1 px-2 text-center w-10 rounded" style="background: #F2C94C;">
-                                    <i class="bi bi-cart "></i>
-                                </a>
-                            </div>
-                            <div>
-                                <span class="text-gray-400 line-through">300$</span>
-                                <span class="text-red-500">300$</span>
-                            </div>
-                            <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Accusamus,
-                                adipisci.</p>
-                        </div>
-                    </div>
-                @endfor
-            </div>
-        </div>
-
-
-        <div class="space-y-5">
-            <h3 class="font-bold text-xl">
-                BRAND
-            </h3>
-
-            <div>
-                <!-- Set up your HTML -->
-                <div class="owl-carousel">
-                    @for($i=0;$i<20;$i++)
-                        <div class="p-2">
-                            <div class="shadow bg-gray-200 h-24 flex items-center justify-center">
-                                <img src="{{asset('fe/img/nike.jpeg')}}"
-                                     class="object-fit h-16 w-full"/>
-                            </div>
-                        </div>
-                    @endfor
-
                 </div>
-            </div>
+            @endfor
         </div>
     </div>
-    <!--END MAIN CONTENT-->
 
-    <!--FOOTER-->
-    <footer>
+    <!--NEW ARIVAL PRODUCT-->
+    <div class="space-y-5">
+        <h3 class="font-bold text-xl">NEW ARIVAL PRODUCT <a style="color:#F2994A;" class="text-sm font-normal">See
+                All</a>
+        </h3>
+        <div class="grid md:grid-cols-4 grid-cols-1 gap-10">
+            @for($i=0;$i<8;$i++)
+                <div class="shadow">
+                    <div class="relative">
+                        <img src="{{asset('fe/img/shoes.jpeg')}}" class="object-cover h-64 w-full"/>
+                        <a class="absolute top-4 w-10 h-10 text-center rounded shadow right-4 p-2 bg-white">
+                            <i class="bi bi-heart"></i>
+                        </a>
+                    </div>
 
-    </footer>
-    <!--END FOOTER-->
+
+                    <div class="px-4 py-2">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-lg">Product Name</h3>
+                            <a class="shadow py-1 px-2 text-center w-10 rounded" style="background: #F2C94C;">
+                                <i class="bi bi-cart "></i>
+                            </a>
+                        </div>
+                        <div>
+                            <span class="text-gray-400 line-through">300$</span>
+                            <span class="text-red-500">300$</span>
+                        </div>
+                        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Accusamus,
+                            adipisci.</p>
+                    </div>
+                </div>
+            @endfor
+        </div>
+    </div>
+
+
+</div>
+<!--END MAIN CONTENT-->
+
+<!--FOOTER-->
+<footer>
+
+</footer>
+<!--END FOOTER-->
 </div>
 
-<script>
-    $(document).ready(function () {
-        $(".owl-carousel").owlCarousel({
-            items: 10,
-            autoplay: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 3
-                },
-                1000: {
-                    items: 10
-                }
-            }
-        });
-    });
-</script>
 <script>
     var cont=0;
     function loopSlider(){
