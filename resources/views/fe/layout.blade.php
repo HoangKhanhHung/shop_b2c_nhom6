@@ -27,6 +27,7 @@
             <a>Email: hotro@gmail.com</a>
         </div>
         <div class="flex items-center gap-7 text-xl" style="margin-right: 30px">
+            <a href=""><i class="bi bi-heart"></i></a>
             <a href=""><i class="bi bi-person"></i></a>
             <a href=""><i class="bi bi-cart"></i></a>
         </div>
