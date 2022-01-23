@@ -1,6 +1,6 @@
 @extends('fe.layout')
 @section('content')
-    <div class="space-y-2">
+    <div class="space-y-2" style="margin-left:20px; margin-right:20px">
         <div class="grid md:grid-cols-2 gap-10">
             <div>
                 <!--TRÌNH XEM ẢNH-->
@@ -14,9 +14,11 @@
 
             <div class="space-y-2">
                 <h1 class="font-bold text-2xl">{{$product->name}}</h1>
-                <div>
-                    <span>SKU: 189216792</span>
-                </div>
+                @if($product->sku)
+                    <div>
+                        <span>SKU: {{$product->sku}}</span>
+                    </div>
+                @endif
                 <div class="font-bold text-xl">
                     {{$product->price}} VND
                 </div>
@@ -52,7 +54,7 @@
                     <div class="w-28 border">
                         <div class="flex w-full items-center justify-evenly gap-2 border-gray-300">
                             <div class="text-xl pl-10 cursor-pointer">+</div>
-                            <input type="number" class="
+                            <input type="number" value="1" id="quantity" class="
                             my-2
                          border-l
                          text-center border-r
@@ -65,7 +67,10 @@
 
                     <div class="w-1/2 space-y-2">
 
-                        <button class="bg-black w-full text-white py-4 uppercase">Add To Cart</button>
+                        <button id="btn-add-to-cart" class="bg-black w-full text-white py-4 uppercase">
+                            Add To Cart
+                        </button>
+
                         <div class="w-full flex gap-2">
                             <button class="border border-gray-300 py-4 px-2 text-sm uppercase w-1/2 inline-block">
                                 <i class="bi bi-heart"></i>
@@ -90,13 +95,13 @@
 
     </div>
 
-    <div>
+    <div style="margin-left:20px; margin-right:20px">
         <h3 class="font-bold text-xl uppercase">You might like this
             <a style="color:#F2994A;"
                class="text-sm font-normal">See
                 All</a>
         </h3>
-        <div class="grid grid-cols-4 gap-10">
+        <div class="grid grid-cols-4 gap-10 mt-5">
             @foreach($suggestProducts as $product)
                 @include('fe.components.card-product',
 ['product'=>$product])
@@ -104,3 +109,31 @@
         </div>
     </div>
 @endsection
+
+@section('script')
+    <script>
+        $(document).ready(function () {
+            $('#btn-add-to-cart').click(function () {
+                let quantity = $('#quantity').val();
+                let variantValues = ["Đen", "Đỏ"];
+                /*   $('.variant-value').each(function () {
+                       variantValues.push($(this).val());
+                   });*/
+                $.ajax({
+                    url: '{{route('api.cart.add')}}',
+                    type: 'POST',
+                    data: {
+                        id: {{\Illuminate\Support\Facades\Request::segment(2)}},
+                        quantity: quantity,
+                        variant_values: variantValues
+                    },
+                    success: function (data) {
+                        alert('Thêm vào giỏ hàng thành công');
+                        getTotalItems(API_TOTAL_ITEMS_IN_CART);
+                    }
+                })
+            })
+        })
+    </script>
+@endsection
+

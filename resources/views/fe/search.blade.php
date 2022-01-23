@@ -1,6 +1,6 @@
 @extends('fe.layout')
 @section('content')
-    <div>
+    <div style="margin-left:20px; margin-right:20px">
         <h3 class="font-bold text-xl uppercase">Result Search for "{{ $q }}"</h3>
         </h3>
 

@@ -26,7 +26,7 @@
 
     <!--MAIN CONTENT-->
 
-    <div class="space-y-10">
+    <div class="space-y-10" style="margin-left:20px; margin-right:20px">
         <!--TOP PRODUCT-->
         <div class="space-y-5">
             <h3 class="font-bold text-xl">FEATURE PRODUCT <a style="color:#F2994A;" class="text-sm font-normal">See
