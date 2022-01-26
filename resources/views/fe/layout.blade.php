@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="{{asset('fe/owl-carousel/assets/owl.theme.default.min.css')}}">
     <script src="{{asset('fe/jquery/jquery.min.js')}}"></script>
     <script src="{{asset('fe/owl-carousel/owl.carousel.min.js')}}"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
 </head>
 <body>
 <div class="container mx-auto space-y-10">
@@ -21,11 +20,11 @@
 
     <img src="{{asset('fe/img/logoo.jpg')}}" width="500" class="mx-auto"/>
 
-@include('fe.commons.nav')
+    @include('fe.commons.nav')
 
-@section('content')
+    @section('content')
 
-@show
+    @show
 
     @include('fe.commons.footer')
 

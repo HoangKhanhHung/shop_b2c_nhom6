@@ -18,7 +18,7 @@
             <br>
         </div>
         <div class="flex justify-between w-12 mx-auto pb-2" style="margin-top: -100px">
-            <button id="sButton1" onclick="sliderButton1()" class="bg-purple-400 rounded-full w-4 pb-2 " ></button>
+            <button id="sButton1" onclick="sliderButton1()" class="bg-purple-400 rounded-full w-4 pb-2 "></button>
             <button id="sButton2" onclick="sliderButton2() " class="bg-purple-400 rounded-full w-4 p-2"></button>
         </div>
     </div>
@@ -117,67 +117,66 @@
     </script>
 
     <script>
-        var cont=0;
-        function loopSlider(){
-            var xx= setInterval(function(){
-                switch(cont)
-                {
-                    case 0:{
+        var cont = 0;
+
+        function loopSlider() {
+            var xx = setInterval(function () {
+                switch (cont) {
+                    case 0: {
                         $("#slider-1").fadeOut(400);
                         $("#slider-2").delay(400).fadeIn(400);
                         $("#sButton1").removeClass("bg-purple-800");
                         $("#sButton2").addClass("bg-purple-800");
-                        cont=1;
+                        cont = 1;
 
                         break;
                     }
-                    case 1:
-                    {
+                    case 1: {
 
                         $("#slider-2").fadeOut(400);
                         $("#slider-1").delay(400).fadeIn(400);
                         $("#sButton2").removeClass("bg-purple-800");
                         $("#sButton1").addClass("bg-purple-800");
 
-                        cont=0;
+                        cont = 0;
 
                         break;
                     }
 
 
-                }},8000);
+                }
+            }, 8000);
 
         }
 
-        function reinitLoop(time){
+        function reinitLoop(time) {
             clearInterval(xx);
-            setTimeout(loopSlider(),time);
+            setTimeout(loopSlider(), time);
         }
 
 
-
-        function sliderButton1(){
+        function sliderButton1() {
 
             $("#slider-2").fadeOut(400);
             $("#slider-1").delay(400).fadeIn(400);
             $("#sButton2").removeClass("bg-purple-800");
             $("#sButton1").addClass("bg-purple-800");
             reinitLoop(4000);
-            cont=0
+            cont = 0
 
         }
 
-        function sliderButton2(){
+        function sliderButton2() {
             $("#slider-1").fadeOut(400);
             $("#slider-2").delay(400).fadeIn(400);
             $("#sButton1").removeClass("bg-purple-800");
             $("#sButton2").addClass("bg-purple-800");
             reinitLoop(4000);
-            cont=1
+            cont = 1
 
         }
 
-        $(window).ready(function(){
+        $(window).ready(function () {
             $("#slider-2").hide();
             $("#sButton1").addClass("bg-purple-800");
 
