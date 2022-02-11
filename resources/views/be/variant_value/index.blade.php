@@ -6,7 +6,6 @@
                 <div class="card-header">
                     <h3 class="card-title"></h3>
                 </div>
-                <!-- /.card-header -->
                 <div class="card-body">
                     <table class="table table-bordered">
                         <thead>
@@ -21,7 +20,7 @@
                         @foreach($list as $item)
                             <tr>
                                 <td>{{$item->id}}</td>
-                                <<td>{{$item->value}}</td>
+                                <td>{{$item->value}}</td>
                                 <td>
                                     @if($item->variant)
                                         <span class="badge badge-primary">
@@ -57,6 +56,8 @@
         <li class="breadcrumb-item active">List</li>
     </ol>
 @endsection
+
+
 @section('heading')
     Variant Value
 @endsection

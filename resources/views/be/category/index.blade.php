@@ -48,6 +48,8 @@
         <li class="breadcrumb-item active">List</li>
     </ol>
 @endsection
+
+
 @section('heading')
     Category
 @endsection

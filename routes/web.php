@@ -13,12 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/be-layout', function (){
-    return view('be.layout');
-});
+require __DIR__ . '/fe.php';
+require __DIR__ . '/be.php';
 
-require_once __DIR__ . '/be.php';
-require_once __DIR__ . '/fe.php';
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';

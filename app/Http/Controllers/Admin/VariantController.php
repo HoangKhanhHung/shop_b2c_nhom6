@@ -45,7 +45,6 @@ class VariantController extends Controller implements ICrud
     public function doAdd(Request $request)
     {
         // TODO: Implement doAdd() method.
-        // TODO: Implement doAdd() method.
         $name = $request->name;
         try {
             Variant::create([

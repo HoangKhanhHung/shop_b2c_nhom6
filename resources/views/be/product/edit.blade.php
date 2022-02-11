@@ -261,6 +261,9 @@
         })
     </script>
 @endsection
+
+
 @section('heading')
     Product
 @endsection
+

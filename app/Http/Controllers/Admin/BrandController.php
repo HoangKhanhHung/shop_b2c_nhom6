@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Brand;
-use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -63,6 +62,8 @@ class BrandController extends Controller implements ICrud
     public function doEdit($id, Request $request)
     {
         // TODO: Implement doEdit() method.
+        // TODO: Implement doAdd() method.
+        // TODO: Implement doAdd() method.
         $name = $request->name;
         try {
 
@@ -77,7 +78,7 @@ class BrandController extends Controller implements ICrud
             }
 
             //upload logo
-            if($request->file('logo')) {
+            if ($request->file('logo')) {
                 $file = $request->file('logo');
                 $logoFileName = $id . $file->getClientOriginalName();
                 $file->storeAs('images/brand/logo', $logoFileName, 'public');

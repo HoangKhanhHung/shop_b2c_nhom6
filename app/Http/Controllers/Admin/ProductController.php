@@ -28,7 +28,8 @@ class ProductController extends Controller implements ICrud
         $categories = \App\Models\Category::all();
         $brands = Brand::all();
         $variants = Variant::all();
-        return view('be.product.add', compact('categories','brands','variants'));
+        return view('be.product.add', compact('categories',
+            'brands', 'variants'));
     }
 
     public function doAdd(Request $request)
@@ -81,6 +82,7 @@ class ProductController extends Controller implements ICrud
                     $i++;
                 }
             }
+
             //check if product has variant
             if ($request->has('variants')) {
                 $variants = $request->variants;
@@ -192,6 +194,7 @@ class ProductController extends Controller implements ICrud
                 }
             }
 
+
             if ($request->has('variants')) {
                 $variants = $request->variants;
                 //delete old data
@@ -208,7 +211,6 @@ class ProductController extends Controller implements ICrud
                         $variantValueName = $variantArr[3];
 
 
-
                         ProductVariant::create([
                             'product_id' => $id,
                             'variant_id' => $variantId,
@@ -220,11 +222,10 @@ class ProductController extends Controller implements ICrud
 
                 }
             }
+
         } catch (\Exception $exception) {
             return redirect()->back()->with('error', "Update failed");
         }
-
-
         //chuyển hướng về trang  danh sách
         return redirect()->route('admin.product.list')->with('success', 'Update successfully');
     }
@@ -241,6 +242,7 @@ class ProductController extends Controller implements ICrud
         }
         return redirect()->back()->with('success', "Delete successfully");
     }
+
     public function search(Request $request)
     {
         $query = $request->input('query');
@@ -253,3 +255,4 @@ class ProductController extends Controller implements ICrud
         return view('be.product.index', compact('list'));
     }
 }
+

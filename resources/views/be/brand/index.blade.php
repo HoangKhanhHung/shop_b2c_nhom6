@@ -27,6 +27,7 @@
                                              style="width: 100px; height: 100px">
                                     @else
                                         <img src="https://via.placeholder.com/150
+
 C/O https://placeholder.com/"
                                              style="width: 100px; height: 100px">
                                     @endif
@@ -55,10 +56,13 @@ C/O https://placeholder.com/"
 @section('bread-crumb')
     <ol class="breadcrumb float-sm-right">
         <li class="breadcrumb-item"><a href="#">Admin</a></li>
-        <<li class="breadcrumb-item"><a href="{{route('admin.brand.list')}}">Brand</a></li>
+        <li class="breadcrumb-item"><a href="{{route('admin.brand.list')}}">Brand</a></li>
         <li class="breadcrumb-item active">List</li>
     </ol>
 @endsection
+
+
 @section('heading')
     Brand
 @endsection
+

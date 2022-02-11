@@ -15,6 +15,7 @@ class VariantValue extends Model
     {
         return $this->belongsTo(Variant::class);
     }
+
     public function products()
     {
         return $this->

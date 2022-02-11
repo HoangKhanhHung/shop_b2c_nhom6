@@ -1,25 +1,22 @@
 <?php
+
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('/admin')->group(function (){
-    Route::prefix('/user')->group(function (){
-
-        Route::get('/list',
-            [\App\Http\Controllers\Admin\UserController::class, 'index'])->name('admin.user.list');
-
+//admin/user/add
+Route::prefix('/admin')->group(function () {
+    Route::prefix('/user')->group(function () {
+        Route::get('/list', [\App\Http\Controllers\Admin\UserController::class, 'index'])->name('admin.user.list');
         Route::get('/add',
             [\App\Http\Controllers\Admin\UserController::class, 'add'])->name('admin.user.add');
-
         Route::post('/do-add',
             [\App\Http\Controllers\Admin\UserController::class, 'doAdd'])->name('admin.user.doAdd');
+        Route::get('/edit/{id}', [\App\Http\Controllers\Admin\UserController::class, 'edit'])
+            ->name('admin.user.edit');
+        Route::post('/do-edit/{id}', [\App\Http\Controllers\Admin\UserController::class, 'doEdit'])
+            ->name('admin.user.doEdit');
+        Route::get('/delete/{id}', [\App\Http\Controllers\Admin\UserController::class, 'delete'])
+            ->name('admin.user.delete');
 
-        Route::get('/edit/{id}',
-            [\App\Http\Controllers\Admin\UserController::class, 'edit'])->name('admin.user.edit');
-
-        Route::post('//do-edit/{id}',
-            [\App\Http\Controllers\Admin\UserController::class, 'doEdit'])->name('admin.user.doEdit');
-        Route::get('/delete/{id}',
-            [\App\Http\Controllers\Admin\UserController::class,'delete'])->name('admin.user.delete');
         Route::get('/search', [\App\Http\Controllers\Admin\UserController::class, 'search'])
             ->name('admin.user.search');
     });
@@ -50,6 +47,7 @@ Route::prefix('/admin')->group(function (){
             ->name('admin.product.doEdit');
         Route::get('/delete/{id}', [\App\Http\Controllers\Admin\ProductController::class, 'delete'])
             ->name('admin.product.delete');
+
         Route::get('/search', [\App\Http\Controllers\Admin\ProductController::class, 'search'])
             ->name('admin.product.search');
     });
@@ -95,4 +93,17 @@ Route::prefix('/admin')->group(function (){
         Route::get('/delete/{id}', [\App\Http\Controllers\Admin\BrandController::class, 'delete'])
             ->name('admin.brand.delete');
     });
+
+    Route::prefix('/order')->group(function () {
+        Route::get('/list', [\App\Http\Controllers\Admin\OrderController::class,
+            'filter'])->name('admin.order.list');
+        Route::get('/detail/{id}', [\App\Http\Controllers\Admin\OrderController::class,
+            'detail'])->name('admin.order.detail');
+        Route::get('/change-status/{id}/{status}', [\App\Http\Controllers\Admin\OrderController::class, 'changeStatus',
+        ])->name('admin.order.change-status');
+    });
+
+
 });
+
+

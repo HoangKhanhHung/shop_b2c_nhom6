@@ -13,7 +13,8 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label>Name</label>
-                            <input type="text" name="name" class="form-control" value="{{$category->name}}" placeholder="Enter name">
+                            <input type="text" name="name" class="form-control" value="{{$category->name}}"
+                                   placeholder="Enter name">
                         </div>
                     </div>
                     <!-- /.card-body -->
@@ -34,6 +35,8 @@
         <li class="breadcrumb-item active">Edit</li>
     </ol>
 @endsection
+
+
 @section('heading')
     Category
 @endsection

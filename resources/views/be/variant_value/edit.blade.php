@@ -4,7 +4,7 @@
         <div class="col-md-12">
             <div class="card card-primary">
                 <div class="card-header">
-                    <h3 class="card-title">Edit Varian Valuet</h3>
+                    <h3 class="card-title">Edit Variant Value</h3>
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
@@ -16,7 +16,6 @@
                             <input type="text" name="variant_value" class="form-control" value="{{$variantValue->value}}"
                                    placeholder="Enter Value">
                         </div>
-
                         <div class="form-group">
                             <label>Variant</label>
                             <select class="form-control" name="variant_id">
@@ -26,7 +25,6 @@
                             </select>
                         </div>
                     </div>
-                    <!-- /.card-body -->
 
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary">Submit</button>
@@ -44,6 +42,7 @@
         <li class="breadcrumb-item active">Edit</li>
     </ol>
 @endsection
+
 
 @section('heading')
     Variant Value

@@ -162,7 +162,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Main Sidebar Container -->
 @include('be.commons.aside')
 
-    <!-- Content Wrapper. Contains page content -->
+<!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <div class="content-header">
@@ -247,7 +247,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{asset('be/adminlte/js/adminlte.min.js')}}"></script>
 
 @section('script')
-
 @show
 </body>
 </html>

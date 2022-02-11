@@ -23,15 +23,16 @@ class Product extends Model
         'category_id'
     ];
 
-//    public function brand()
-//    {
-//        return $this->belongsTo('App\Model\Brand');
-//    }
+    /*    public function brand()
+        {
+            return $this->belongsTo('App\Models\Brand');
+        }*/
 
     public function category()
     {
         return $this->belongsTo(Category::class);
     }
+
 
     public function images()
     {
@@ -48,6 +49,7 @@ class Product extends Model
         return $this->hasOne(Image::class)
             ->where('is_preview', 1);
     }
+
     public function variants()
     {
         return $this->belongsToMany(Variant::class, 'product_variants',
@@ -61,4 +63,5 @@ class Product extends Model
             'product_id',
             'variant_value_id');
     }
+
 }
