@@ -25,6 +25,13 @@
                             <label>Phone</label>
                             <input type="text" name="phone" class="form-control" placeholder="Phone">
                         </div>
+                        <div class="form-group">
+                            <label>Level</label>
+                            <select name="level" class="form-control">
+                                <option value="admin">Admin</option>
+                                <option value="user">User</option>
+                            </select>
+                        </div>
 
                         <div class="form-group">
                             <label>Password</label>
