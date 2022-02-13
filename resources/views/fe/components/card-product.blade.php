@@ -10,22 +10,22 @@
 C/O https://placeholder.com/"
                      class="object-cover h-64 w-full">
 
-                <a class="absolute top-4 w-10 h-10 text-center rounded shadow right-4 p-2 bg-white">
-                    <i class="bi bi-heart"></i>
-                </a>
+{{--                <a class="absolute top-4 w-10 h-10 text-center rounded shadow right-4 p-2 bg-white">--}}
+{{--                    <i class="bi bi-heart"></i>--}}
+{{--                </a>--}}
             @endif
         </div>
 
         <div class="px-4 py-2">
             <div class="flex justify-between items-center">
                 <h3 class="font-bold text-lg">{{$product->name}}</h3>
-                <a class="shadow py-1 px-2 text-center w-10 rounded" style="background: #F2C94C;">
-                    <i class="bi bi-cart "></i>
-                </a>
+{{--                <a class="shadow py-1 px-2 text-center w-10 rounded" style="background: #F2C94C;">--}}
+{{--                    <i class="bi bi-cart "></i>--}}
+{{--                </a>--}}
             </div>
             <div>
-                <span class="text-gray-400 line-through">{{\Akaunting\Money\Money::USD($product->price,true)}}</span>
-                <span class="text-red-500">{{\Akaunting\Money\Money::USD($product->price,true)}}</span>
+{{--                <span class="text-gray-400 line-through">{{\Akaunting\Money\Money::USD($product->price,true)}}</span>--}}
+                <span class="text-red-500">{{\Akaunting\Money\Money::VND($product->price,true)}}</span>
             </div>
             <p class="text-sm">{{$product->short_description}}</p>
         </div>

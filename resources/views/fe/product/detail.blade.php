@@ -1,8 +1,8 @@
 @extends('fe.layout')
 @section('content')
-    <div class="space-y-2" style="margin-left:20px; margin-right:20px">
+    <div class="space-y-2">
         <div class="grid md:grid-cols-2 gap-10">
-            <div>
+            <div style="height: 500px; width: 357px" class="mx-auto">
                 <!--TRÌNH XEM ẢNH-->
                 <ul id="lightSlider">
                     @foreach($product->images as $img)
@@ -97,11 +97,11 @@
                 </div>
             </div>
         </div>
-
+<br><br>
         <h4 class="font-semibold text-xl">Thông tin</h4>
         <hr class="borer-b border-1 bg-gray-200"/>
         <div>
-            {!!$product->content!!}
+            {!! $product->content !!}
         </div>
 
     </div>

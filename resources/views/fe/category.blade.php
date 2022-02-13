@@ -1,9 +1,8 @@
 @extends('fe.layout')
 @section('content')
-    <div style="margin-left:20px; margin-right:20px">
-        <h3 class="font-bold text-xl uppercase">{{ $category->name }}</h3>
-        </h3>
-
+    <div>
+        <h3 class="font-bold text-3xl text-center uppercase">{{ $category->name }}</h3>
+<br>
         @if(!$products->isEmpty())
             <div class="grid md:grid-cols-4 grid-cols-1 gap-10">
                 @foreach($products as $product)

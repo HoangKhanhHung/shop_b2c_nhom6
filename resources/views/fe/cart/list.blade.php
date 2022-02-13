@@ -1,6 +1,6 @@
 @extends('fe.layout')
 @section('content')
-    <div style="margin-left:20px; margin-right:20px">
+    <div>
         <div class="grid grid-cols-5 border p-5">
             <div class="font-bold">Product</div>
             <div class="font-bold">Price/1 Items</div>
