@@ -1,6 +1,6 @@
 @extends('fe.layout')
 @section('content')
-    <div class="space-y-2" style="margin-left:20px; margin-right:20px">
+    <div class="space-y-2">
         <div class="grid md:grid-cols-2 gap-10">
             <div style="height: 500px; width: 357px" class="mx-auto">
                 <!--TRÌNH XEM ẢNH-->
@@ -82,37 +82,32 @@
                             Add To Cart
                         </button>
 
-{{--                        <div class="w-full flex gap-2">--}}
-{{--                            <button class="border border-gray-300 py-4 px-2 text-sm uppercase w-1/2 inline-block">--}}
-{{--                                <i class="bi bi-heart"></i>--}}
-{{--                                Add To WishList--}}
-{{--                            </button>--}}
+                        {{--<div class="w-full flex gap-2">
+                            <button class="border border-gray-300 py-4 px-2 text-sm uppercase w-1/2 inline-block">
+                                <i class="bi bi-heart"></i>
+                                Add To WishList
+                            </button>
 
-{{--                            <button class="border border-gray-300 py-4 px-2 text-sm uppercase w-1/2 inline-block">--}}
-{{--                                <i class="bi bi-share"></i>--}}
-{{--                                Share--}}
-{{--                            </button>--}}
-{{--                        </div>--}}
+                            <button class="border border-gray-300 py-4 px-2 text-sm uppercase w-1/2 inline-block">
+                                <i class="bi bi-share"></i>
+                                Share
+                            </button>
+                        </div>--}}
                     </div>
                 </div>
             </div>
         </div>
-        <br>
-        <br>
+<br><br>
         <h4 class="font-semibold text-xl">Thông tin</h4>
         <hr class="borer-b border-1 bg-gray-200"/>
-
-        <?php
-        echo html_entity_decode($product->content);
-        ?>
+        <div>
+            {!! $product->content !!}
+        </div>
 
     </div>
 
     <div>
         <h3 class="font-bold text-xl uppercase">You might like this
-            <a style="color:#F2994A;"
-               class="text-sm font-normal">See
-                All</a>
         </h3>
         <div class="grid grid-cols-4 gap-10 mt-5">
             @foreach($suggestProducts as $product)
@@ -195,7 +190,7 @@
 
     <style>
         .active-select-variant {
-            background: #111111;
+            background: #0c84ff;
             color: white
         }
     </style>

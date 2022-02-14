@@ -48,8 +48,7 @@
     <div class="space-y-10">
         <!--TOP PRODUCT-->
         <div class="space-y-5">
-            <h3 class="font-bold text-3xl text-center">FEATURE PRODUCT <a style="color:#F2994A;" class="text-sm font-normal">See
-                    All</a>
+            <h3 class="font-bold text-3xl text-center">FEATURE PRODUCT
             </h3>
             <div class="grid md:grid-cols-4 grid-cols-1 gap-10">
                 @foreach($featureProducts as $product)
@@ -60,8 +59,7 @@
 
         <!--NEW ARIVAL PRODUCT-->
         <div class="space-y-5">
-            <h3 class="font-bold text-3xl text-center">NEW ARIVAL PRODUCT <a style="color:#F2994A;" class="text-sm font-normal">See
-                    All</a>
+            <h3 class="font-bold text-3xl text-center">NEW ARIVAL PRODUCT
             </h3>
             <div class="grid md:grid-cols-8 grid-cols-1 gap-10">
                 @foreach($newProducts as $product)
@@ -78,15 +76,15 @@
     <!--NEWSETTLER FORM-->
 
     <div class="md:grid grid-cols-7 place-items-center p-10" style="background: #DFDFDF">
-            <div class="col-span-3">
-                <h4 class="font-bold text-3xl">Đăng ký nhận bản tin</h4>
-                <p class="font-bold text-base">Đừng bỏ lỡ hàng ngàn sản phẩm và các chương trình siêu hấp dẫn</p>
-            </div>
             <div class="col-span-4">
+                <h4 class="font-bold text-3xl">Đăng ký nhận thông tin mới nhất từ THT Fashion</h4>
+                <p class="font-bold text-base">Để không bỏ lỡ hàng ngàn sản phẩm và các chương trình siêu hấp dẫn</p>
+            </div>
+            <div class="col-span-3">
                 <form class="flex gap-2 items-center border-2 w-full">
 {{--                    <input type="email" class="bg-white h-16 w-48 p-2" required/>--}}
                     <input type="email" class="bg-white h-16 w-48 p-2" placeholder="Nhập email" required>
-                    <button class="uppercase text-2xl h-16 font-bold bg-yellow-300 p-2" type="button"  onclick="dieu_huong() ">Đăng Ký</button>
+                    <button class="uppercase text-white text-2xl h-16 font-bold bg-dark p-2" type="button"  onclick="dieu_huong() ">Đăng Ký</button>
                     <script>
                         function dieu_huong (){
                             location.assign("http://ldp.to/07Vtz");

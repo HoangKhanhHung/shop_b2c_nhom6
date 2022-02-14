@@ -12,40 +12,40 @@
         </div>
 
         <div class="space-y-5">
-            <h3 class="uppercase font-bold">About Us</h3>
+            <h3 class="uppercase font-bold">VỀ CHÚNG TÔI</h3>
             <hr class="border-1 border-white">
             <ul class="space-y-5">
-                <li><a>Introduction</a></li>
-                <li><a>Our franchise</a></li>
-                <li><a>Career</a></li>
+                <li><a>Giới thiệu</a></li>
+                <li><a>Nhượng quyền của chúng tôi</a></li>
+                <li><a>Sự nghiệp</a></li>
             </ul>
         </div>
 
         <div class="space-y-5">
-            <h3 class="uppercase font-bold">Support</h3>
+            <h3 class="uppercase font-bold">HỖ TRỢ</h3>
             <hr class="border-1 border-white">
             <ul class="space-y-5">
-                <li>Order Guide</li>
-                <li>Refund Policy</li>
+                <li>Hướng dẫn đặt hàng</li>
+                <li>Chính sách hoàn lại tiền</li>
             </ul>
         </div>
 
         <div class="space-y-5">
-            <h3 class="uppercase font-bold">Social</h3>
+            <h3 class="uppercase font-bold">MẠNG XÃ HỘI</h3>
             <hr class="border-1 border-white">
             <div class="flex gap-2">
                     <span class="border-2 border-white rounded-full w-10 h-10 flex items-center justify-center">
-                        <a href="">
+                        <a href="https://www.facebook.com/">
                             <i class="bi bi-facebook"></i>
                         </a>
                     </span>
                 <span class="border-2 border-white rounded-full w-10 h-10 flex items-center justify-center">
-                        <a href="">
+                        <a href="https://www.instagram.com/">
                            <i class="bi bi-instagram"></i>
                         </a>
                     </span>
                 <span class="border-2 border-white rounded-full w-10 h-10 flex items-center justify-center">
-                        <a href="">
+                        <a href="https://www.youtube.com/">
                          <i class="bi bi-youtube"></i>
                         </a>
                     </span>

@@ -27,19 +27,19 @@
                     <label for="" class="block font-semibold">Full name *</label>
                     <input class="border border-black p-2 w-full"
                            value="{{$authedUser->full_name}}"
-                           type="text" name="full_name"/>
+                           type="text" name="full_name" required/>
                 </div>
 
                 <div>
                     <label for="" class="block font-semibold">Phone *</label>
                     <input class=" border border-black p-2 w-full" type="text"
                            value="{{$authedUser->phone}}"
-                           name="phone"/>
+                           name="phone" required/>
                 </div>
 
                 <div>
                     <label for="" class="block font-semibold">Address *</label>
-                    <input class="border border-black p-2 w-full" type="text" name="address"/>
+                    <input class="border border-black p-2 w-full" type="text" name="address" required/>
                 </div>
 
                 <div>

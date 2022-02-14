@@ -14,7 +14,7 @@
 {{--                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>--}}
 {{--            </li>--}}
             <li class="navbar-brand">
-                <a class="nav-link inline-block text-white" href="/"><i
+                <a class="nav-link inline-block text-white text-2xl" href="/"><i
                         class="bi bi-house"></i></a>
                 @foreach($categories as $cat)
                     <a class="nav-link inline-block text-white"
@@ -43,8 +43,10 @@
 {{--            </li>--}}
         </ul>
         <form action="{{route('fe.search')}}" class="form-inline my-2 my-lg-0">
+            <a class="relative px-1 py-2 text-white inline-block h-full text-2xl" href="{{route('fe.user.my-orders')}}">
+                <i class="bi bi-person"></i></a>
             <a href="{{route('fe.cart')}}"
-               class="relative px-4 py-2 text-white inline-block h-full text-xl">
+               class="relative px-4 py-1 text-white inline-block h-full text-2xl">
                 <i class="bi bi-cart"></i>
                 <div id="total-item-in-cart" class="absolute w-5 h-5
                 bottom-5 right-1
