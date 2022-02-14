@@ -17,14 +17,15 @@
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input type="file" name="logo" class="images-input custom-file-input"
-                                           id="exampleInputFile">
+                                           id="exampleInputFile"  required>
                                     <label class="custom-file-label" for="exampleInputFile">Choose Logo</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Name</label>
-                            <input type="text" name="name" class="form-control" placeholder="Enter name">
+
+                            <input type="text" name="name" class="form-control" placeholder="Enter name"  required>
                         </div>
                     </div>
                     <!-- /.card-body -->

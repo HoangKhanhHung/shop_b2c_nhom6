@@ -25,7 +25,7 @@
                                         <div class="custom-file">
                                             <input type="file" name="images[]" multiple
                                                    class="images-input custom-file-input"
-                                                   id="exampleInputFile">
+                                                   id="exampleInputFile"  required>
                                             <label class="custom-file-label" for="exampleInputFile">Choose Image</label>
                                         </div>
                                     </div>
@@ -34,7 +34,7 @@
 
                                 <div class="form-group">
                                     <label>Name</label>
-                                    <input type="text" name="name" class="form-control" placeholder="Enter name">
+                                    <input type="text" name="name" class="form-control" placeholder="Enter name"  required>
                                 </div>
 
                                 <div class="form-group">
@@ -50,7 +50,7 @@
                                 <div class="form-group">
                                     <label>Content</label>
                                     <textarea name="txt-content" class="form-control txt-content"
-                                              placeholder="Enter Content"></textarea>
+                                              placeholder="Enter Content" ></textarea>
                                 </div>
 
 
@@ -59,7 +59,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Price</label>
-                                    <input type="number" name="price" class="form-control" placeholder="Enter Price">
+                                    <input type="number" name="price" class="form-control" placeholder="Enter Price"  required>
                                 </div>
                                 <div>
                                     <label>Brand</label>
@@ -82,25 +82,25 @@
                                 <div>
                                     <label>Discount Amount</label>
                                     <input type="number" name="discount_amount" class="form-control"
-                                           placeholder="Enter Discount Amount">
+                                           placeholder="Enter Discount Amount"  required>
                                 </div>
 
                                 <div class="form-group">
                                     <label>Meta Keyword</label>
                                     <input type="text" name="meta_keyword" class="form-control"
-                                           placeholder="Meta Keyword">
+                                           placeholder="Meta Keyword"  required>
                                 </div>
 
                                 <div class="form-group">
                                     <label>Meta Content</label>
                                     <input type="text" name="meta_content" class="form-control"
-                                           placeholder="Enter Meta Content">
+                                           placeholder="Enter Meta Content"  required>
                                 </div>
 
                                 <div class="form-group">
                                     <label>Meta Description</label>
                                     <input type="text" name="meta_description" class="form-control"
-                                           placeholder="Enter Meta Description">
+                                           placeholder="Enter Meta Description" required>
                                 </div>
 
                                 <div class="form-group">
@@ -119,7 +119,7 @@
                                                     @foreach($variant->variantValues as $variantValue)
                                                         <div>
                                                             <input type="checkbox" name="variants[]"
-                                                                   value="{{$variant->id}}$|{{$variant->name}}$|{{$variantValue->id}}$|{{$variantValue->value}}"/>
+                                                                   value="{{$variant->id}}$|{{$variant->name}}$|{{$variantValue->id}}$|{{$variantValue->value}} " />
                                                             <span>
                                                      {{$variantValue->value}}
                                                  </span>

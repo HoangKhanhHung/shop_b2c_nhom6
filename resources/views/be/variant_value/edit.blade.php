@@ -14,7 +14,7 @@
                         <div class="form-group">
                             <label>Name</label>
                             <input type="text" name="variant_value" class="form-control" value="{{$variantValue->value}}"
-                                   placeholder="Enter Value">
+                                   placeholder="Enter Value" required>
                         </div>
                         <div class="form-group">
                             <label>Variant</label>

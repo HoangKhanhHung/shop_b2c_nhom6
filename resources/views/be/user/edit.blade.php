@@ -14,13 +14,13 @@
                         <div class="form-group">
                             <label>Email address</label>
                             <input type="email" name="email" value="{{$user->email}}" class="form-control"
-                                   placeholder="Enter email">
+                                   placeholder="Enter email" required>
                         </div>
 
                         <div class="form-group">
                             <label>Full Name</label>
-                            <input type="text" name="full_name" value="{{$user->full_name}}" class="form-control"
-                                   placeholder="Full Name">
+                            <input type="text" name="full_name" value="{{$user->full_name}}" class="form-control" minlength="6"
+                                   placeholder="Full Name" required>
                         </div>
 
                         <div class="form-group">
@@ -46,7 +46,8 @@
 
                         <div class="form-group">
                             <label>Password</label>
-                            <input type="password" name="password" class="form-control" placeholder="Password">
+                            <input type="password" name="password" class="form-control" placeholder="Password"
+                                   minlength="6" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Vui lòng bao gồm ít nhất 1 ký tự viết hoa, 1 ký tự viết thường và 1 số." required>
                         </div>
                     </div>
                     <!-- /.card-body -->

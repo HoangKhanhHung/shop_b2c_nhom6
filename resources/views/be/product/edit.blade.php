@@ -30,7 +30,7 @@
                                         <div class="custom-file">
                                             <input type="file" name="images[]" multiple
                                                    class="images-input custom-file-input"
-                                                   id="exampleInputFile">
+                                                   id="exampleInputFile"  required>
                                             <label class="custom-file-label" for="exampleInputFile">Choose Image</label>
                                         </div>
                                     </div>
@@ -40,7 +40,7 @@
                                 <div class="form-group">
                                     <label>Name</label>
                                     <input type="text" name="name" value="{{$product->name}}" class="form-control"
-                                           placeholder="Enter name">
+                                           placeholder="Enter name" required>
                                 </div>
 
                                 <div class="form-group">
@@ -66,7 +66,7 @@
                                 <div class="form-group">
                                     <label>Price</label>
                                     <input type="number" name="price" class="form-control" value="{{$product->price}}"
-                                           placeholder="Enter Price">
+                                           placeholder="Enter Price"  required>
                                 </div>
 
                                 <div>
@@ -99,27 +99,27 @@
                                     <label>Discount Amount</label>
                                     <input type="number" value="{{$product->discount_amount}}" name="discount_amount"
                                            class="form-control"
-                                           placeholder="Enter Discount Amount">
+                                           placeholder="Enter Discount Amount" required>
                                 </div>
 
                                 <div class="form-group">
                                     <label>Meta Keyword</label>
                                     <input type="text" name="meta_keyword" value="{{$product->meta_keyword}}"
-                                           class="form-control" placeholder="Meta Keyword">
+                                           class="form-control" placeholder="Meta Keyword" required>
                                 </div>
 
                                 <div class="form-group">
                                     <label>Meta Content</label>
                                     <input type="text" name="meta_content" value="{{$product->meta_content}}"
                                            class="form-control"
-                                           placeholder="Enter Meta Content">
+                                           placeholder="Enter Meta Content" required>
                                 </div>
 
                                 <div class="form-group">
                                     <label>Meta Description</label>
                                     <input type="text" name="meta_description" value="{{$product->meta_description}}"
                                            class="form-control"
-                                           placeholder="Enter Meta Description">
+                                           placeholder="Enter Meta Description" required>
                                 </div>
 
                                 <div class="form-group">

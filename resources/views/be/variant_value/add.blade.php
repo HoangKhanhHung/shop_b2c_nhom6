@@ -14,7 +14,7 @@
                         <div class="form-group">
                             <label>Variant Value</label>
                             <input type="text" name="variant_value" class="form-control"
-                                   placeholder="Enter Value">
+                                   placeholder="Enter Value"required>
                         </div>
 
                         <div class="form-group">

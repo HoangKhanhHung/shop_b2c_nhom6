@@ -19,8 +19,7 @@
 
     @include('fe.commons.nav1')
 
-    <img src="{{asset('fe/img/logoo.jpg')}}" width="500" class="mx-auto"/>
-
+    <a href="/"><img src="{{asset('fe/img/logoo.jpg')}}" width="500" class="mx-auto" style="margin-top: 40px"/></a>
 {{--    @include('fe.commons.nav')--}}
 
     @section('content')
