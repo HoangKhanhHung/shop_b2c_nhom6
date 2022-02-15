@@ -27,7 +27,7 @@
                             <label>Phone</label>
                             <input type="text" name="phone" value="{{$user->phone}}" class="form-control"
                                    placeholder="Phone" pattern="^\d{10}$"
-                                   required>
+                            >
                         </div>
 
                         <div class="form-group">
