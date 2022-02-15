@@ -52,7 +52,7 @@
                     </td>
                     <td>
                         <a class="btn btn-warning"
-                           href="{{route('fe.user.order',['id'=>$item->id])}}">Detail</a>
+                           href="{{route('fe.user.order-detail',['id'=>$item->id])}}">Detail</a>
                     </td>
                 </tr>
             @endforeach

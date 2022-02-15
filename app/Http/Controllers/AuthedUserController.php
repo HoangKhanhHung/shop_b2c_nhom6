@@ -52,7 +52,9 @@ class AuthedUserController extends Controller
         return view('fe.user.my-orders',compact('list'));
     }
 
-    public function orderDetail()
+    public function orderDetail($id)
     {
+        $order = Order::find($id);
+        return view('fe.user.order-detail', compact('order'));
     }
 }

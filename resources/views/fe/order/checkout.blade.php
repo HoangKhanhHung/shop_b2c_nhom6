@@ -27,14 +27,14 @@
                     <label for="" class="block font-semibold">Full name *</label>
                     <input class="border border-black p-2 w-full"
                            value="{{$authedUser->full_name}}"
-                           type="text" name="full_name" required/>
+                           type="text" name="full_name" minlength="5" required/>
                 </div>
 
                 <div>
                     <label for="" class="block font-semibold">Phone *</label>
                     <input class=" border border-black p-2 w-full" type="text"
                            value="{{$authedUser->phone}}"
-                           name="phone" required/>
+                           name="phone" pattern="^\d{10}$" required/>
                 </div>
 
                 <div>

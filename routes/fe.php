@@ -23,8 +23,8 @@ Route::prefix('user')->middleware(['auth'])->group(function () {
         ->name('fe.user.profile');
     Route::get('/my-orders', [\App\Http\Controllers\AuthedUserController::class, 'myOrders'])
         ->name('fe.user.my-orders');
-    Route::get('/order/{id}', [\App\Http\Controllers\AuthedUserController::class, 'orderDetail'])
-        ->name('fe.user.order');
+    Route::get('/order-detail/{id}', [\App\Http\Controllers\AuthedUserController::class, 'orderDetail'])
+        ->name('fe.user.order-detail');
     /*Route::get('/wishlist', [\App\Http\Controllers\\App\Http\Controllers\AuthedUserController::class, 'wishlist'])
         ->name('fe.user.wishlist');*/
     Route::get('/logout', [\App\Http\Controllers\AuthedUserController::class, 'logout'])
