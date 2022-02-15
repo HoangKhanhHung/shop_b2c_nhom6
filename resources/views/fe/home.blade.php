@@ -26,7 +26,7 @@
     @if($brands && count($brands->toArray())>0)
         <div class="space-y-5">
             <h3 class="font-bold text-3xl text-center">
-{{--                BRAND--}}
+                {{--                BRAND--}}
             </h3>
             <div>
                 <!-- Set up your HTML -->
@@ -76,23 +76,23 @@
     <!--NEWSETTLER FORM-->
 
     <div class="md:grid grid-cols-7 place-items-center p-10" style="background: #DFDFDF">
-            <div class="col-span-4">
-                <h4 class="font-bold text-3xl">Đăng ký nhận thông tin mới nhất từ THT Fashion</h4>
-                <p class="font-bold text-base">Để không bỏ lỡ hàng ngàn sản phẩm và các chương trình siêu hấp dẫn</p>
-            </div>
-            <div class="col-span-3">
-                <form class="flex gap-2 items-center border-2 w-full">
-{{--                    <input type="email" class="bg-white h-16 w-48 p-2" required/>--}}
-                    <input type="email" class="bg-white h-16 w-48 p-2" placeholder="Nhập email" required>
-                    <button class="uppercase text-white text-2xl h-16 font-bold bg-dark p-2" type="button"  onclick="dieu_huong() ">Đăng Ký</button>
-                    <script>
-                        function dieu_huong (){
-                            location.assign("http://ldp.to/07Vtz");
-                        }
-                    </script>
-                </form>
-            </div>
+        <div class="col-span-4">
+            <h4 class="font-bold text-3xl">Đăng ký nhận thông tin mới nhất từ THT Fashion</h4>
+            <p class="font-bold text-base">Để không bỏ lỡ hàng ngàn sản phẩm và các chương trình siêu hấp dẫn</p>
         </div>
+        <div class="col-span-3">
+            <form class="flex gap-2 items-center border-2 w-full">
+                {{--                    <input type="email" class="bg-white h-16 w-48 p-2" required/>--}}
+                <input type="email" class="bg-white h-16 w-48 p-2" placeholder="Nhập email" required>
+                <button class="uppercase text-white text-2xl h-16 font-bold bg-dark p-2" type="button"  onclick="dieu_huong() ">Đăng Ký</button>
+                <script>
+                    function dieu_huong (){
+                        location.assign("http://ldp.to/07Vtz");
+                    }
+                </script>
+            </form>
+        </div>
+    </div>
 
     <!--END FORM-->
 

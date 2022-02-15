@@ -100,14 +100,13 @@
 <br><br>
         <h4 class="font-semibold text-xl">Thông tin</h4>
         <hr class="borer-b border-1 bg-gray-200"/>
-        <div>
-            {!! $product->content !!}
-        </div>
-
+        <?php
+        echo html_entity_decode($product->content);
+        ?>
     </div>
 
     <div>
-        <h3 class="font-bold text-xl uppercase">You might like this
+        <h3 class="font-bold text-xl uppercase">Có thể bạn sẽ thích?
         </h3>
         <div class="grid grid-cols-4 gap-10 mt-5">
             @foreach($suggestProducts as $product)
@@ -190,7 +189,7 @@
 
     <style>
         .active-select-variant {
-            background: #0c84ff;
+            background: #111111;
             color: white
         }
     </style>
